@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   description: string;
   price: number;
-  category: 'coffee' | 'thermos' | 'accessory';
+  category: 'coffee' | 'thermos' | 'accessory' | 'bakery';
   image: string;
   bestSeller?: boolean;
 }

@@ -37,6 +37,7 @@ export default function MenuPage() {
               {PRODUCTS.filter(p => 
                 category.id === 'coffee' ? p.category === 'coffee' && !p.name.toLowerCase().includes('iced') && !p.name.toLowerCase().includes('cold') :
                 category.id === 'cold' ? (p.category === 'coffee' && (p.name.toLowerCase().includes('iced') || p.name.toLowerCase().includes('cold'))) :
+                category.id === 'bakery' ? p.category === 'bakery' :
                 false
               ).map((product, idx) => (
                 <motion.div
@@ -50,12 +51,6 @@ export default function MenuPage() {
                 </motion.div>
               ))}
             </div>
-            
-            {category.id === 'bakery' && (
-              <div className="bg-white p-12 rounded-[3rem] text-center border-2 border-dashed border-indigo-brand/10">
-                <p className="text-indigo-brand/40 font-bold uppercase tracking-widest italic">Çok yakında taze fırın ürünlerimizle buradayız!</p>
-              </div>
-            )}
           </section>
         ))}
 

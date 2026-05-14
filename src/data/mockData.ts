@@ -21,20 +21,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'c4',
-    name: 'Cold Brew Signature',
+    name: 'Signature Cold Brew',
     description: '24 saat soğuk demlenmiş, meyvemsi ve yumuşak içimli özel harman.',
     price: 180,
     category: 'coffee',
     image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=800&auto=format&fit=crop',
     bestSeller: true,
-  },
-  {
-    id: 'c5',
-    name: 'Flat White',
-    description: 'İki shot espresso ve kadifemsi sütün mükemmel uyumu.',
-    price: 145,
-    category: 'coffee',
-    image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=800&auto=format&fit=crop',
   },
   {
     id: 'c6',
@@ -45,8 +37,26 @@ export const PRODUCTS: Product[] = [
     image: 'https://images.unsplash.com/photo-1517701550731-8974ab63e691?q=80&w=800&auto=format&fit=crop',
   },
   {
+    id: 'b1',
+    name: 'Tereyağlı Kruvasan',
+    description: 'Fransız usulü kat kat açılmış, çıtır çıtır taze kruvasan.',
+    price: 95,
+    category: 'bakery',
+    image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop',
+    bestSeller: true,
+  },
+  {
+    id: 'b2',
+    name: 'San Sebastian Cheesecake',
+    description: 'Akışkan iç dokusu ve yanık üst yüzeyi ile efsane lezzet.',
+    price: 165,
+    category: 'bakery',
+    image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=800&auto=format&fit=crop',
+    bestSeller: true,
+  },
+  {
     id: 't1',
-    name: 'Matte Indigo Termos',
+    name: 'BeeBu Gold Edition Termos',
     description: 'İçeceklerinizi 12 saat sıcak, 24 saat soğuk tutan sızdırmaz tasarım.',
     price: 1250,
     category: 'thermos',
@@ -54,36 +64,12 @@ export const PRODUCTS: Product[] = [
     bestSeller: true,
   },
   {
-    id: 't2',
-    name: 'Explorer Classic Termos',
-    description: 'Dayanıklı çelik gövde, macera severler için tasarlandı.',
-    price: 1450,
-    category: 'thermos',
-    image: 'https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=800&auto=format&fit=crop',
-  },
-  {
     id: 'a1',
-    name: 'Hario V60 Demleme Seti',
+    name: 'Hario V60 BeeBu Edition',
     description: 'Evde profesyonel kahve demlemenin en şık yolu.',
     price: 850,
     category: 'accessory',
     image: 'https://images.unsplash.com/photo-1544666107-160fa1f9745e?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    id: 'a2',
-    name: 'Seramik Kahve El Değirmeni',
-    description: 'Ayarlanabilir öğütme derecesi ile tazeliği yakalayın.',
-    price: 1200,
-    category: 'accessory',
-    image: 'https://images.unsplash.com/photo-1525148001712-4299b1585fef?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    id: 'c3',
-    name: 'Santos Blend',
-    description: 'Geleneksel Brezilya çekirdeklerinin özenle kavrulmuş yoğun harmanı.',
-    price: 380,
-    category: 'coffee',
-    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop',
   }
 ];
 
@@ -92,7 +78,7 @@ export const BRANCHES: Branch[] = [
     id: 'istanbul',
     city: 'İstanbul',
     address: 'Galata Mah. Serdar-ı Ekrem Sokak No: 12, Beyoğlu',
-    coordinates: { x: 26, y: 32 } // Approximate percentages on Turkey map SVG
+    coordinates: { x: 26, y: 32 }
   },
   {
     id: 'antalya',
@@ -105,5 +91,47 @@ export const BRANCHES: Branch[] = [
     city: 'Maraş',
     address: 'Bahçelievler Mah. 12. Sokak No: 5, Kahramanmaraş',
     coordinates: { x: 74, y: 64 }
+  },
+];
+
+export const EVENTS = [
+  {
+    id: '1',
+    title: 'Akustik Gece: Caz & Kahve',
+    location: 'İstanbul, Beşiktaş Şubesi',
+    date: '20 Mayıs 2026',
+    time: '20:00',
+    type: 'Konser',
+    description: 'Şehrin gürültüsünden uzak, en kaliteli caz tınıları ve taze demlenmiş kahve kokusu eşliğinde unutulmaz bir akşam. Yerel caz sanatçılarımızın performansıyla ruhunuzu dinlendirin.',
+    image: 'https://images.unsplash.com/photo-1514525253361-bee8718a300c?q=80&w=800&auto=format&fit=crop',
+    price: 'Ücretsiz',
+    capacity: '40 Kişi',
+    details: 'Etkinliğimiz sınırlı kontenjan ile gerçekleşecektir. Katılım için sayfanın altındaki formdan veya şubemizden kayıt yaptırmanız rica olunur.'
+  },
+  {
+    id: '2',
+    title: 'Latte Art Workshop',
+    location: 'Antalya, Muratpaşa Şubesi',
+    date: '24 Mayıs 2026',
+    time: '14:00',
+    type: 'Workshop',
+    description: 'Kahvenin üzerine sanat yapmaya hazır mısınız? Temel süt köpürtme tekniklerinden karmaşık desenlere kadar latte art dünyasını keşfedeceğiniz uygulamalı bir eğitim.',
+    image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=800&auto=format&fit=crop',
+    price: '₺450',
+    capacity: '8 Kişi',
+    details: 'Tüm malzemeler tarafımızdan karşılanacaktır. Katılımcılara workshop sonunda BeeBuCoffee katılım sertifikası verilecektir.'
+  },
+  {
+    id: '3',
+    title: 'Demleme Teknikleri Eğitimi',
+    location: 'Maraş, Merkez Şubesi',
+    date: '02 Haziran 2026',
+    time: '11:00',
+    type: 'Eğitim',
+    description: 'V60, Chemex ve Aeropress... Evde profesyonel kahve demlemenin sırlarını uzman baristalarımızdan öğrenin. Doğru öğütme, su sıcaklığı ve süre dengesini keşfedin.',
+    image: 'https://images.unsplash.com/photo-1544666107-160fa1f9745e?q=80&w=800&auto=format&fit=crop',
+    price: '₺300',
+    capacity: '12 Kişi',
+    details: 'Eğitim sonunda tercih ettiğiniz bir yöresel çekirdek 250gr hediye edilecektir.'
   }
 ];

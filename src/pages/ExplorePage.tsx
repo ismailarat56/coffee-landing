@@ -54,42 +54,49 @@ export default function ExplorePage() {
             <h4 className="text-cream-brand/40 text-xs font-bold uppercase tracking-[0.4em] mb-12">Türkiye Şube Haritası</h4>
             
             <div className="relative w-full max-w-4xl aspect-[2/1] bg-indigo-brand/40 rounded-full border border-white/5 p-4 md:p-8 flex items-center justify-center">
-              {/* Detailed Turkey Map SVG Path */}
-              <svg viewBox="0 0 800 400" className="w-full h-full fill-white/10 stroke-white/20 stroke-[0.5]">
-                <path d="M40.24,197.68c-0.24-11.01,8.08-16.73,15.7-18.35c7.3-1.55,14.67-1.39,22.04-1.12c14.07,0.51,28.16,0.3,42.23-0.08 c10.36-0.28,21.03-1.63,31.25-3.32c5.96-0.98,9.75-2.52,14.77-5.54c3.48-2.09,6.96-4.18,10.15-6.68c3.21-2.52,5.7-5.75,9.52-7.55 c4.03-1.9,8.51-1.63,12.72-2.55c3.23-0.71,6.13-2.31,9.29-3.41c6.51-2.26,13.23-3.81,20.09-3.92c8.24-0.14,16.48-0.03,24.74,0 c7.45,0.03,14.89,0.13,22.34,0c7.87-0.14,15.75-0.17,23.63,0c7.09,0.15,14.21,0.58,21.28,1.21c5.95,0.53,11.83,1.48,17.78,2.2c5.92,0.72,11.83,1.5,17.76,2.15c6.57,0.72,13.2,0.96,19.78,1.55c6.77,0.6,13.48,1.82,20.25,2.44c13.78,1.26,27.57,2.25,41.43,2.44c13.4,0.18,26.83,0,40.23-0.34c8.11-0.21,16.27-1.14,24.36-1.51c7.43-0.34,14.87-0.3,22.32-0.27c13.88,0.06,27.76,0,41.65-0.03c14.33-0.03,28.67,0.3,42.98,1.02c4.08,0.21,8.19,0.67,12.24,1.1c4.52,0.48,9,1.15,13.49,1.85c5.36,0.84,10.66,2.14,15.93,3.58c5.84,1.6,11.59,3.54,17.3,5.63c4.26,1.56,8.51,3.22,12.63,5.13c5,2.32,9.81,5.26,14.3,8.71c4.76,3.66,8.78,8.27,11.64,13.62c1.97,3.68,3.52,7.74,3.75,12c0.14,2.5,0.07,4.99-0.03,7.49c-0.11,2.83-0.23,5.67-0.1,8.48c0.2,4.07,1.01,8.08,0.92,12.18c-0.06,2.78-0.5,5.62-1.34,8.27c-1.14,3.6-3.21,6.86-5.46,9.88c-4.48,6.01-11.23,9.52-18,12.12c-5.74,2.2-11.66,3.95-17.65,5.27c-9.2,2.03-18.57,3.21-27.97,3.84c-11.13,0.75-22.3,0.93-33.45,0.78c-11.02-0.15-22.04-0.13-33.05,0.34c-6.83,0.29-13.62,1.29-20.44,1.9c-8.91,0.8-17.84,1.18-26.79,1.05c-11.09-0.16-22.2-1.14-33.28-1.55c-11.09-0.41-22.18-0.25-33.27,0.1c-13.1,0.41-26.19,0.86-39.29,1.16c-13.61,0.31-27.23,0.42-40.85,0.31c-12.78-0.1-25.56,0.11-38.33,0.75c-12.75,0.64-25.54,2-38.27,3.68c-12.8,1.69-25.68,3.84-38.48,6.31c-7.39,1.43-14.77,3.12-22.25,3.32c-3.14,0.08-6.23-0.65-9.31-1.2c-5.11-0.91-10.15-2.07-15.12-3.48c-3.29-0.93-6.49-2.22-9.69-3.48c-3.83-1.51-7.66-2.91-11.41-4.71c-4.48-2.15-8.73-4.9-12.87-7.85c-4.38-3.13-8.52-6.61-12.44-10.42c-3.79-3.69-7.23-7.79-10.37-12.11c-2.43-3.34-4.52-6.91-6.15-10.74c-1.35-3.18-2.31-6.46-3.04-9.82C39.11,209.64,37.38,206.18,40.24,197.68z" />
+              {/* Real Turkey Map Silhouette */}
+              <svg viewBox="0 0 1000 500" className="w-full h-full text-white/5 opacity-40 group-hover:opacity-60 transition-opacity">
+                <path 
+                  fill="currentColor"
+                  d="M185.35,321.13c-0.63-0.56-1.39-2.91-1.69-5.21c-0.45-3.48,0.51-5.32,3.31-6.31c2.18-0.77,5.55-2.28,7.5-3.35c2.39-1.31,4.35,0.73,6.34,6.61c0.77,2.27,1.83,4.13,2.37,4.13c0.53,0,1.52,2.02,2.2,4.49c1,3.61,2.05,4.72,3.95,4.14c1.19-0.36,6.37-6.07,11.52-12.69c8.29-10.66,10.22-12.72,13.62-14.54c5.07-2.73,8.02-3.38,15.7-3.46c6.16-0.07,10.2-0.57,12.98-1.62c4.14-1.57,11.53-7.53,15.93-12.83c1.76-2.12,3.2-4.14,3.2-4.5c0-1.74,13.06,1,23.36,4.92c10.37,3.94,22.18,9,26.24,11.24s12.59,7.66,19.01,12.04c10.45,7.12,17.2,10.74,27.18,14.57c15.2,5.83,27.02,7.24,53.48,6.37c15.2-0.5,23.23,0.06,29.98,2c11,3.16,33.09,1.14,40.42-3.69c1.94-1.28,3.53-2.14,3.53-1.9c0,0.24-4.86,3.65-10.8,7.57c-5.94,3.92-12.6,9.15-14.81,11.62c-3.13,3.5-4.21,6.58-10.65,30.34c-4.48,16.5-7.79,23.86-9.67,21.5c-0.42-0.53,0.18-2.61,1.34-4.63c1.16-2,1.35-4.32,0.41-5.15c-0.93-0.83-5.32,0.67-9.76,3.33c-10.15,6.1-12.82,14.65-7.14,23.01c2.14,3.15,2.02,3.77-0.78,4.19c-11.45,1.73-15.54,6.72-20.73,25.29c-3.33,11.96-7.05,17.47-16.14,23.95c-7,5-8,6.23-8,10c0,5.7-8.39,11.89-14.28,10.54c-2.31-0.53-6.26-2.34-8.77-4.01c-6.1-4.06-12.33-14.63-12.33-20.93c0-3.37-4.24-5.69-12.58-6.88c-7.23-1.04-8.52-1.74-9.31-5.07c-0.65-2.73-2.07-5-3.14-5.04c-1.08-0.04-1.95,1.37-1.95,3.13c0,2.15-0.89,3.19-2.58,3.02c-1.35-0.14-3.51-1.39-4.81-2.77s-3.52-2.51-4.94-2.51c-4.52,0-9.69,7.63-11.23,16.56c-0.63,3.67-1.59,6.72-2.14,6.77s-1-4.31-1-9.7c0-11-2.13-16.89-8.47-23.4l-5.62-5.78l-5.3,0.67c-13.06,1.66-26.68-7.79-28.78-20.01c-0.53-3.13-1.63-5.21-2.45-4.62c-0.83,0.59-1,2.69-0.38,4.67c0.88,2.83,0.56,3.64-0.97,2.44c-1.08-0.84-2.36,0.3-2.84,2.54c-1.12,5.21-11.21,11-19.16,11c-12.32,0-15.69,5.78-14.61,25.07c0.35,6.38,0.3,13.84-0.12,16.57c-1,6.58-12.44,17.43-16,15.19c-1-0.63-1.81-4.24-1.81-8c0-5-2.03-8.82-5.67-10.74c-4.13-2.17-5.18-12.38-1.53-14.94c0.86-0.61,4.3,0.22,7.64,1.83c5.3,2.55,6.07,2.37,6.07-1.42c0-8.62,11.53-29.35,16.57-30.13c2.23-0.35,3.22-1.28,2.2-2.09c-1.46-1.15-1.12-10.51,0.5-13.56c1.1-2.07,10-14.07,10-13.43c0,0.21-2.61,1.15-5.81,2.07s-6.3,2.49-6.9,3.48c-0.6,0.99-1.5,1.2-2,0.47C186.2,323.01,186.2,321.89,185.35,321.13z" 
+                />
               </svg>
 
-              {/* Branch Markers with updated coordinate matching */}
+              {/* Branch Markers */}
               {BRANCHES.map((branch) => {
-                // Adjust coordinates for the new SVG viewport if needed, 
-                // but let's assume original ones are roughly okay for the 800x400 area
+                const isSelected = selectedBranch?.id === branch.id;
+                let coords = { left: '0%', top: '0%' };
+                if (branch.id === 'istanbul') coords = { left: '24%', top: '32%' };
+                if (branch.id === 'antalya') coords = { left: '34.5%', top: '75%' };
+                if (branch.id === 'maras') coords = { left: '74%', top: '65%' };
+
                 return (
                   <motion.button
                     key={branch.id}
                     onClick={() => setSelectedBranch(branch)}
                     className="absolute z-20 group"
-                    style={{ left: `${branch.coordinates.x}%`, top: `${branch.coordinates.y}%` }}
+                    style={coords}
                     whileHover={{ scale: 1.2 }}
                   >
                     <div className={cn(
                       "relative flex items-center justify-center transition-all duration-300",
-                      selectedBranch?.id === branch.id ? "scale-125" : ""
+                      isSelected ? "scale-125" : ""
                     )}>
                       <div className={cn(
                         "absolute inset-0 bg-gold-brand rounded-full animate-ping opacity-40",
-                        selectedBranch?.id === branch.id ? "opacity-60" : "hidden"
+                        isSelected ? "opacity-60" : "hidden"
                       )} />
                       <div className={cn(
-                        "w-6 h-6 rounded-full flex items-center justify-center border-2 border-white shadow-xl transition-colors",
-                        selectedBranch?.id === branch.id ? "bg-gold-brand" : "bg-indigo-brand"
+                        "w-7 h-7 rounded-full flex items-center justify-center border-2 border-white shadow-xl transition-colors",
+                        isSelected ? "bg-gold-brand" : "bg-indigo-brand hover:bg-gold-brand"
                       )}>
-                        <Coffee size={10} className="text-white" />
+                        <Coffee size={12} className="text-white" />
                       </div>
                     </div>
                     
                     {/* Tooltip */}
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white text-indigo-brand px-3 py-1.5 rounded-xl shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-30 pointer-events-none">
-                      <p className="text-[10px] font-bold uppercase">{branch.city}</p>
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white text-indigo-brand px-4 py-2 rounded-2xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-30 pointer-events-none border border-indigo-brand/5">
+                      <p className="text-xs font-black uppercase tracking-widest">{branch.city}</p>
                     </div>
                   </motion.button>
                 );
@@ -104,33 +111,28 @@ export default function ExplorePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
-                  className="mt-12 w-full max-w-xl bg-cream-brand/10 backdrop-blur-md rounded-3xl p-8 border border-white/10 flex flex-col md:flex-row gap-8 items-center"
+                  className="mt-12 w-full max-w-xl bg-white/10 backdrop-blur-xl rounded-[2.5rem] p-10 border border-white/10 flex flex-col md:flex-row gap-10 items-center shadow-2xl"
                 >
-                  <div className="shrink-0 w-24 h-24 bg-gold-brand rounded-3xl flex items-center justify-center text-cream-brand shadow-lg">
-                    <Coffee size={40} />
+                  <div className="shrink-0 w-28 h-28 bg-gold-brand rounded-[2rem] flex items-center justify-center text-cream-brand shadow-2xl shadow-gold-brand/20">
+                    <Coffee size={48} />
                   </div>
-                  <div className="flex-1 space-y-4 text-center md:text-left">
+                  <div className="flex-1 space-y-6 text-center md:text-left">
                     <div>
-                      <h3 className="text-2xl font-serif font-bold text-cream-brand">{selectedBranch.city} Şubesi</h3>
-                      <p className="text-cream-brand/70 text-sm leading-relaxed">{selectedBranch.address}</p>
+                      <h3 className="text-3xl font-serif font-bold text-cream-brand">{selectedBranch.city} Şubesi</h3>
+                      <p className="text-cream-brand/60 text-base leading-relaxed font-light">{selectedBranch.address}</p>
                     </div>
                     <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                      <button className="bg-gold-brand text-cream-brand px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-2 hover:bg-white hover:text-indigo-brand transition-all">
-                        <Navigation size={14} /> Yol Tarifi Al
+                      <button className="bg-gold-brand text-indigo-brand px-8 py-3 rounded-full text-xs font-black uppercase tracking-widest flex items-center gap-3 hover:bg-white transition-all active:scale-95 shadow-xl shadow-gold-brand/10">
+                        <Navigation size={16} /> YOL TARİFİ
                       </button>
-                      <button className="bg-transparent border border-white/20 text-cream-brand px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-2 hover:bg-white/10 transition-all">
-                        <Phone size={14} /> {selectedBranch.id === 'istanbul' ? '0212 555 44 33' : '0242 333 22 11'}
+                      <button className="bg-white/5 border border-white/10 text-cream-brand px-8 py-3 rounded-full text-xs font-black uppercase tracking-widest flex items-center gap-3 hover:bg-white/20 transition-all">
+                        <Phone size={16} /> İLETİŞİM
                       </button>
                     </div>
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
-            
-            <div className="absolute bottom-8 left-8 flex items-center gap-3">
-              <div className="w-10 h-[1px] bg-white/20" />
-              <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Coğrafi Keşif Modu</p>
-            </div>
           </div>
         </div>
       </div>

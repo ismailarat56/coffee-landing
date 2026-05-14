@@ -16,6 +16,8 @@ import CampaignsPage from './pages/CampaignsPage';
 import EventsPage from './pages/EventsPage';
 import ContactPage from './pages/ContactPage';
 import RegisterPage from './pages/RegisterPage';
+import ProductDetailPage from './pages/ProductDetailPage';
+import EventDetailPage from './pages/EventDetailPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,6 +46,8 @@ export default function App() {
             <Route path="/events" element={<EventsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/product/:id" element={<ProductDetailPage />} />
+            <Route path="/event/:id" element={<EventDetailPage />} />
           </Routes>
         </div>
         <Footer />

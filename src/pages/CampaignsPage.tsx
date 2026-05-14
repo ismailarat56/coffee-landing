@@ -13,7 +13,7 @@ const CAMPAIGNS = [
   {
     id: 2,
     title: 'Yeni Üyelere Özel İlk Kahve Bizden',
-    description: 'Artisan & Brew ailesine katılan tüm yeni üyelerimize ilk siparişlerinde diledikleri bir içecek hediye.',
+    description: 'BeeBuCoffee ailesine katılan tüm yeni üyelerimize ilk siparişlerinde diledikleri bir içecek hediye.',
     dateRange: '31 Mayıs\'a kadar',
     image: 'https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?q=80&w=800&auto=format&fit=crop',
     color: 'bg-indigo-brand'

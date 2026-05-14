@@ -5,12 +5,10 @@ import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
 
 const EXPLORE_SUB_LINKS = [
-  { name: 'Bayilerimiz', path: '/explore', icon: MapPin },
   { name: 'Menü', path: '/menu', icon: UtensilsCrossed },
   { name: 'Blog', path: '/blog', icon: BookOpen },
   { name: 'Kampanyalar', path: '/campaigns', icon: Tag },
   { name: 'Etkinlikler', path: '/events', icon: Calendar },
-  { name: 'İletişim', path: '/contact', icon: MessageSquare },
 ];
 
 export function Header() {
@@ -37,6 +35,12 @@ export function Header() {
     };
   }, []);
 
+  const navLinks = [
+    { name: 'Mağaza', path: '/shop' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Menü', path: '/menu' },
+  ];
+
   return (
     <header 
       className={cn(
@@ -45,57 +49,51 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-indigo-brand rounded-full flex items-center justify-center text-cream-brand transition-transform group-hover:rotate-12">
-            <Coffee size={24} />
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="w-12 h-12 bg-indigo-brand rounded-2xl flex items-center justify-center text-gold-brand transition-all group-hover:rotate-12 group-hover:bg-gold-brand group-hover:text-indigo-brand shadow-lg">
+            <Coffee size={28} />
           </div>
-          <span className="font-serif text-2xl font-bold tracking-tight text-indigo-brand">
-            Artisan<span className="text-gold-brand">&</span>Brew
+          <span className="font-serif text-2xl font-black tracking-tighter text-indigo-brand">
+            BeeBu<span className="text-gold-brand">Coffee</span>
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          <Link
-            to="/"
-            className={cn(
-              "flex items-center gap-2 text-sm font-medium transition-colors hover:text-gold-brand",
-              location.pathname === '/' ? "text-gold-brand font-bold" : "text-indigo-brand/70"
-            )}
-          >
-            Ana Sayfa
-          </Link>
-          <Link
-            to="/shop"
-            className={cn(
-              "flex items-center gap-2 text-sm font-medium transition-colors hover:text-gold-brand",
-              location.pathname === '/shop' ? "text-gold-brand font-bold" : "text-indigo-brand/70"
-            )}
-          >
-            Mağaza
-          </Link>
+        <nav className="hidden md:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={cn(
+                "text-sm font-bold tracking-wide transition-colors hover:text-gold-brand uppercase",
+                location.pathname === link.path ? "text-gold-brand" : "text-indigo-brand/80"
+              )}
+            >
+              {link.name}
+            </Link>
+          ))}
 
           {/* Explore Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsExploreOpen(!isExploreOpen)}
               className={cn(
-                "flex items-center gap-1 text-sm font-medium transition-colors hover:text-gold-brand cursor-pointer",
-                isExploreOpen || location.pathname === '/explore' ? "text-gold-brand font-bold" : "text-indigo-brand/70"
+                "flex items-center gap-1.5 text-sm font-bold tracking-wide transition-colors hover:text-gold-brand cursor-pointer uppercase",
+                isExploreOpen || location.pathname === '/explore' ? "text-gold-brand" : "text-indigo-brand/80"
               )}
             >
-              Keşfet <ChevronDown size={14} className={cn("transition-transform", isExploreOpen && "rotate-180")} />
+              Keşfet <ChevronDown size={14} className={cn("transition-transform duration-300", isExploreOpen && "rotate-180")} />
             </button>
 
             <AnimatePresence>
               {isExploreOpen && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 mt-4 w-56 bg-white rounded-2xl shadow-2xl border border-indigo-brand/5 p-2 overflow-hidden"
+                  initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 15, scale: 0.95 }}
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-60 bg-white rounded-[2rem] shadow-[0_20px_50px_rgba(40,40,70,0.15)] border border-indigo-brand/5 p-3 overflow-hidden"
                 >
-                  <div className="grid grid-cols-1">
+                  <div className="grid grid-cols-1 gap-1">
                     {EXPLORE_SUB_LINKS.map((link) => {
                       const Icon = link.icon;
                       return (
@@ -103,12 +101,12 @@ export function Header() {
                           key={link.path}
                           to={link.path}
                           onClick={() => setIsExploreOpen(false)}
-                          className="flex items-center gap-3 p-3 rounded-xl transition-colors text-indigo-brand hover:bg-gold-brand/5 hover:text-gold-brand group/item"
+                          className="flex items-center gap-4 p-4 rounded-2xl transition-all text-indigo-brand hover:text-gold-brand hover:bg-indigo-brand/5 group/item"
                         >
-                          <div className="w-8 h-8 rounded-lg bg-indigo-brand/5 flex items-center justify-center group-hover/item:bg-gold-brand/10 group-hover/item:text-gold-brand">
-                            <Icon size={16} />
+                          <div className="w-9 h-9 rounded-xl bg-indigo-brand/5 flex items-center justify-center group-hover/item:bg-gold-brand group-hover/item:text-white transition-colors">
+                            <Icon size={18} />
                           </div>
-                          <span className="text-sm font-semibold">{link.name}</span>
+                          <span className="text-sm font-bold">{link.name}</span>
                         </Link>
                       );
                     })}
@@ -119,19 +117,19 @@ export function Header() {
           </div>
 
           <Link 
-            to="/register"
-            className="bg-indigo-brand text-cream-brand px-6 py-2 rounded-full text-sm font-semibold hover:bg-gold-brand transition-colors active:scale-95"
+            to="/contact"
+            className="bg-indigo-brand text-cream-brand px-8 py-2.5 rounded-full text-sm font-bold hover:bg-gold-brand transition-all shadow-lg shadow-indigo-brand/10 hover:shadow-gold-brand/20 active:scale-95 ml-4"
           >
-            Giriş Yap
+            İletişim
           </Link>
         </nav>
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-indigo-brand p-2"
+          className="md:hidden text-indigo-brand p-2 bg-indigo-brand/5 rounded-xl"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -139,58 +137,52 @@ export function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-cream-brand border-b border-indigo-brand/10 shadow-xl md:hidden overflow-y-auto max-h-[80vh]"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="absolute top-full left-0 w-full bg-cream-brand border-b border-indigo-brand/10 shadow-2xl md:hidden overflow-hidden"
           >
-            <div className="flex flex-col p-6 gap-2">
-              <Link
-                to="/"
-                onClick={() => setIsOpen(false)}
-                className={cn(
-                  "flex items-center gap-4 text-lg font-medium p-3 rounded-lg transition-colors",
-                  location.pathname === '/' ? "bg-gold-brand/10 text-gold-brand" : "text-indigo-brand/70 hover:bg-indigo-brand/5"
-                )}
-              >
-                Ana Sayfa
-              </Link>
-              <Link
-                to="/shop"
-                onClick={() => setIsOpen(false)}
-                className={cn(
-                  "flex items-center gap-4 text-lg font-medium p-3 rounded-lg transition-colors",
-                  location.pathname === '/shop' ? "bg-gold-brand/10 text-gold-brand" : "text-indigo-brand/70 hover:bg-indigo-brand/5"
-                )}
-              >
-                Mağaza
-              </Link>
+            <div className="flex flex-col p-6 gap-3">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "flex items-center gap-4 text-xl font-bold p-4 rounded-2xl transition-all",
+                    location.pathname === link.path ? "bg-gold-brand text-cream-brand" : "text-indigo-brand/70 hover:bg-indigo-brand/5"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              ))}
               
-              <div className="py-2">
-                <p className="px-3 text-[10px] font-bold text-indigo-brand/30 uppercase tracking-widest mb-2">Keşfet</p>
-                <div className="grid grid-cols-2 gap-2">
+              <div className="py-4">
+                <p className="px-4 text-[10px] font-black text-indigo-brand/30 uppercase tracking-[0.2em] mb-4">Keşfedin</p>
+                <div className="grid grid-cols-2 gap-3 mb-6">
                   {EXPLORE_SUB_LINKS.map((link) => (
                     <Link
                       key={link.path}
                       to={link.path}
                       onClick={() => setIsOpen(false)}
-                      className="flex flex-col items-center justify-center p-4 rounded-xl bg-white border border-indigo-brand/5 text-center gap-2 text-indigo-brand hover:text-gold-brand active:scale-95 transition-all"
+                      className="flex flex-col items-center justify-center p-6 rounded-[2rem] bg-white border border-indigo-brand/5 text-center gap-3 text-indigo-brand hover:text-gold-brand active:scale-95 transition-all shadow-sm"
                     >
-                      <link.icon size={20} />
-                      <span className="text-xs font-bold">{link.name}</span>
+                      <div className="w-10 h-10 rounded-full bg-indigo-brand/5 flex items-center justify-center">
+                        <link.icon size={20} />
+                      </div>
+                      <span className="text-xs font-black uppercase tracking-tighter">{link.name}</span>
                     </Link>
                   ))}
                 </div>
-              </div>
 
-              <hr className="border-indigo-brand/10 my-4" />
-              <Link 
-                to="/register"
-                onClick={() => setIsOpen(false)}
-                className="w-full bg-indigo-brand text-cream-brand py-4 rounded-xl font-bold text-center"
-              >
-                Giriş Yap / Kayıt Ol
-              </Link>
+                <Link 
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full bg-indigo-brand text-cream-brand py-5 rounded-2xl font-black text-center text-lg uppercase tracking-widest shadow-xl shadow-indigo-brand/20 flex items-center justify-center gap-3"
+                >
+                  <MessageSquare size={20} /> İLETİŞİM
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

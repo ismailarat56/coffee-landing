@@ -23,7 +23,7 @@ const BLOG_POSTS = [
   {
     id: 3,
     title: 'Indigo ve Altın: Marka Renklerimizin Hikayesi',
-    excerpt: 'Artisan & Brew kimliğini oluşturan indigo mavisi ve altın sarısının temsil ettiği değerler.',
+    excerpt: 'BeeBuCoffee kimliğini oluşturan indigo mavisi ve altın sarısının temsil ettiği değerler.',
     image: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=800&auto=format&fit=crop',
     author: 'Selin Yılmaz',
     date: '01 Mayıs 2026',
@@ -86,13 +86,13 @@ export default function BlogPage() {
         </div>
 
         {/* Brand Story Highlight */}
-        <section className="mt-32 bg-cream-dark rounded-[3rem] p-12 md:p-24 overflow-hidden relative">
+        <section className="mt-32 bg-cream-brand rounded-[3rem] p-12 md:p-24 overflow-hidden relative border border-indigo-brand/5 shadow-inner">
           <div className="absolute top-1/2 right-0 -translate-y-1/2 w-1/3 h-full bg-gold-brand/5 blur-3xl rounded-full" />
           <div className="relative z-10 max-w-2xl space-y-8">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-indigo-brand uppercase">1994'ten <span className="text-gold-brand italic">Sonsuza</span></h2>
             <div className="space-y-6 text-indigo-brand/70 text-lg leading-relaxed">
               <p>
-                Artisan & Brew, sadece kahve satmak için değil, kahveye olan saygıyı yeniden tanımlamak için kuruldu. İstanbul'un tarih kokan dar sokaklarında başlayan bu hikaye, bugün sınırları aşan bir tutkuya dönüştü.
+                BeeBuCoffee, sadece kahve satmak için değil, kahveye olan saygıyı yeniden tanımlamak için kuruldu. İstanbul'un tarih kokan dar sokaklarında başlayan bu hikaye, bugün sınırları aşan bir tutkuya dönüştü.
               </p>
               <p>
                 Bizim için her çekirdek bir hikaye anlatır; toprağından, yağmurundan, çiftçisinin ellerinden taşınan bir hikaye. Görevimiz ise bu hikayeyi en doğru notalarla sizin fincanınıza ulaştırmak.

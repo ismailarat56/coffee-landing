@@ -8,8 +8,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-6">
-            <h3 className="font-serif text-2xl font-bold tracking-tight">
-              Artisan<span className="text-gold-brand">&</span>Brew
+            <h3 className="font-serif text-2xl font-black tracking-tighter">
+              BeeBu<span className="text-gold-brand">Coffee</span>
             </h3>
             <p className="text-cream-brand/70 max-w-xs text-sm leading-relaxed">
               Kahvenin en saf halini, ustalıkla harmanlanmış aromalarla masanıza getiriyoruz. 1994'ten beri aynı tutkuyla.
@@ -35,7 +35,7 @@ export function Footer() {
               <li><Link to="/shop" className="hover:text-gold-brand transition-colors">Mağaza</Link></li>
               <li><Link to="/explore" className="hover:text-gold-brand transition-colors">Şubelerimiz</Link></li>
               <li><a href="#" className="hover:text-gold-brand transition-colors">Kariyer</a></li>
-              <li><a href="#" className="hover:text-gold-brand transition-colors">İletişim</a></li>
+              <li><Link to="/contact" className="hover:text-gold-brand transition-colors">İletişim</Link></li>
             </ul>
           </div>
 
@@ -64,13 +64,13 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-gold-brand shrink-0" />
-                <span>merhaba@artisanbrew.com</span>
+                <span>merhaba@beebucoffee.com</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="pt-8 border-t border-cream-brand/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream-brand/40 italic">
-          <p>© 2026 Artisan & Brew Coffee Co. Tüm hakları saklıdır.</p>
+          <p>© 2026 BeeBuCoffee Co. Tüm hakları saklıdır.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-cream-brand">Gizlilik Politikası</a>
             <a href="#" className="hover:text-cream-brand">KVKK Aydınlatma Metni</a>
