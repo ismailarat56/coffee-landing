@@ -62,15 +62,15 @@ export default function HomePage() {
           >
             <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-md px-6 py-2.5 rounded-full text-indigo-brand text-[10px] font-black tracking-[0.3em] border border-indigo-brand/5 shadow-2xl shadow-indigo-brand/5">
               <Sparkles size={14} className="text-gold-brand animate-pulse" />
-              YEYY! YENİ SEZON HARMANLARI BURADA
+              YEAYY! YENİ SEZON HARMANLARI BURADA
             </div>
             
-            <h1 className="font-serif text-6xl md:text-8xl font-bold text-indigo-brand leading-[1.1] tracking-tighter">
+            <h1 className="font-serif text-6xl md:text-8xl font-bold text-indigo-brand leading-[1.2] tracking-tighter">
               Kahvenin <br />
-              <span className="text-gold-brand italic relative inline-block pb-2 md:pb-4">
+              <span className="text-gold-brand italic relative inline-block mb-1 md:mb-2">
                 En Saf
-                <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 200 8" fill="none">
-                  <path d="M2 6C30 2 170 2 198 6" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                <svg className="absolute -bottom-4 left-0 w-full" viewBox="0 0 200 8" fill="none" preserveAspectRatio="none" style={{ height: '8px' }}>
+                  <path d="M2 6C30 2 170 2 198 6" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
                 </svg>
               </span> <br /> 
               Haliyle Tanışın
@@ -156,7 +156,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 20 }}
                   transition={{ delay: 0.2 }}
-                  src="https://images.unsplash.com/photo-1541167760496-16295cb7c726?q=80&w=600&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1532713107108-dfb5d8d2fc42?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   className="rounded-[2.5rem] w-full h-60 object-cover shadow-2xl" 
                   alt="Barista working" 
                 />

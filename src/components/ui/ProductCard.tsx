@@ -26,7 +26,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
         />
         {product.bestSeller && (
           <div className="absolute top-6 left-6 bg-gold-brand text-cream-brand px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest z-10 shadow-lg shadow-gold-brand/20">
-            En Çok Satan
+            En Çok Sevilen
           </div>
         )}
         <div className="absolute inset-0 bg-indigo-brand/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">

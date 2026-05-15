@@ -24,13 +24,13 @@ export default function MenuPage() {
         </header>
 
         {coffeeCategories.map((category) => (
-          <section key={category.id} className="mb-20">
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-12 h-12 bg-indigo-brand rounded-2xl flex items-center justify-center text-gold-brand shadow-lg">
-                <category.icon size={24} />
+          <section key={category.id} className="mb-24">
+            <div className="flex flex-col items-center text-center gap-4 mb-12">
+              <div className="w-16 h-16 bg-white border border-indigo-brand/10 rounded-[2rem] flex items-center justify-center text-gold-brand shadow-[0_20px_40px_rgba(40,40,70,0.08)]">
+                <category.icon size={28} />
               </div>
-              <h2 className="font-serif text-3xl font-bold text-indigo-brand">{category.name}</h2>
-              <div className="flex-1 h-[1px] bg-indigo-brand/10 ml-4 hidden md:block" />
+              <h2 className="font-serif text-4xl font-bold text-indigo-brand">{category.name}</h2>
+              <div className="w-24 h-[2px] bg-gold-brand/40 mt-2" />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

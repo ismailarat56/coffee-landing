@@ -5,8 +5,7 @@ import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
 
 const EXPLORE_SUB_LINKS = [
-  { name: 'Menü', path: '/menu', icon: UtensilsCrossed },
-  { name: 'Blog', path: '/blog', icon: BookOpen },
+  { name: 'Şubeler', path: '/explore', icon: MapPin },
   { name: 'Kampanyalar', path: '/campaigns', icon: Tag },
   { name: 'Etkinlikler', path: '/events', icon: Calendar },
 ];
@@ -91,7 +90,7 @@ export function Header() {
                   initial={{ opacity: 0, y: 15, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 15, scale: 0.95 }}
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-60 bg-white rounded-[2rem] shadow-[0_20px_50px_rgba(40,40,70,0.15)] border border-indigo-brand/5 p-3 overflow-hidden"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-cream-brand border border-indigo-brand/10 p-2 overflow-hidden shadow-2xl rounded-[1.5rem]"
                 >
                   <div className="grid grid-cols-1 gap-1">
                     {EXPLORE_SUB_LINKS.map((link) => {
@@ -101,12 +100,12 @@ export function Header() {
                           key={link.path}
                           to={link.path}
                           onClick={() => setIsExploreOpen(false)}
-                          className="flex items-center gap-4 p-4 rounded-2xl transition-all text-indigo-brand hover:text-gold-brand hover:bg-indigo-brand/5 group/item"
+                          className="flex items-center gap-4 p-3 rounded-xl transition-all text-indigo-brand/80 hover:text-indigo-brand hover:bg-white group/item"
                         >
-                          <div className="w-9 h-9 rounded-xl bg-indigo-brand/5 flex items-center justify-center group-hover/item:bg-gold-brand group-hover/item:text-white transition-colors">
-                            <Icon size={18} />
+                          <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center group-hover/item:bg-gold-brand group-hover/item:text-white transition-colors border border-indigo-brand/5">
+                            <Icon size={16} />
                           </div>
-                          <span className="text-sm font-bold">{link.name}</span>
+                          <span className="text-sm font-bold tracking-tight">{link.name}</span>
                         </Link>
                       );
                     })}
@@ -115,10 +114,10 @@ export function Header() {
               )}
             </AnimatePresence>
           </div>
-
+          
           <Link 
             to="/contact"
-            className="bg-indigo-brand text-cream-brand px-8 py-2.5 rounded-full text-sm font-bold hover:bg-gold-brand transition-all shadow-lg shadow-indigo-brand/10 hover:shadow-gold-brand/20 active:scale-95 ml-4"
+            className="ml-4 bg-indigo-brand text-cream-brand px-6 py-2.5 rounded-full text-xs font-black tracking-widest uppercase hover:bg-gold-brand transition-all shadow-lg active:scale-95"
           >
             İletişim
           </Link>
@@ -138,50 +137,45 @@ export function Header() {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: '100vh' }}
             exit={{ opacity: 0, height: 0 }}
-            className="absolute top-full left-0 w-full bg-cream-brand border-b border-indigo-brand/10 shadow-2xl md:hidden overflow-hidden"
+            className="absolute top-full left-0 w-full bg-cream-brand border-b border-indigo-brand/10 shadow-2xl md:hidden overflow-y-auto"
+            style={{ height: 'calc(100vh - 80px)' }}
           >
-            <div className="flex flex-col p-6 gap-3">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={cn(
-                    "flex items-center gap-4 text-xl font-bold p-4 rounded-2xl transition-all",
-                    location.pathname === link.path ? "bg-gold-brand text-cream-brand" : "text-indigo-brand/70 hover:bg-indigo-brand/5"
-                  )}
-                >
-                  {link.name}
-                </Link>
-              ))}
+            <div className="flex flex-col items-center justify-center p-8 gap-6 min-h-full">
+              <div className="flex flex-col w-full max-w-sm gap-4">
+                {[...navLinks, { name: 'İletişim', path: '/contact' }].map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "flex items-center justify-center gap-4 text-2xl font-bold p-4 rounded-[2rem] transition-all w-full",
+                      location.pathname === link.path ? "bg-indigo-brand text-cream-brand" : "text-indigo-brand hover:bg-indigo-brand/5 border border-indigo-brand/5 bg-white"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
               
-              <div className="py-4">
-                <p className="px-4 text-[10px] font-black text-indigo-brand/30 uppercase tracking-[0.2em] mb-4">Keşfedin</p>
-                <div className="grid grid-cols-2 gap-3 mb-6">
+              <div className="w-full max-w-sm pt-8 border-t border-indigo-brand/10">
+                <p className="text-center text-xs font-black text-indigo-brand/40 uppercase tracking-[0.3em] mb-6">Daha Fazla Keşfet</p>
+                <div className="grid grid-cols-3 gap-3">
                   {EXPLORE_SUB_LINKS.map((link) => (
                     <Link
                       key={link.path}
                       to={link.path}
                       onClick={() => setIsOpen(false)}
-                      className="flex flex-col items-center justify-center p-6 rounded-[2rem] bg-white border border-indigo-brand/5 text-center gap-3 text-indigo-brand hover:text-gold-brand active:scale-95 transition-all shadow-sm"
+                      className="flex flex-col items-center justify-center p-4 rounded-[1.5rem] bg-white border border-indigo-brand/5 text-center gap-2 text-indigo-brand hover:text-gold-brand active:scale-95 transition-all shadow-sm"
                     >
-                      <div className="w-10 h-10 rounded-full bg-indigo-brand/5 flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-full bg-indigo-brand/5 flex items-center justify-center text-gold-brand">
                         <link.icon size={20} />
                       </div>
-                      <span className="text-xs font-black uppercase tracking-tighter">{link.name}</span>
+                      <span className="text-[10px] font-black uppercase tracking-tighter">{link.name}</span>
                     </Link>
                   ))}
                 </div>
-
-                <Link 
-                  to="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="w-full bg-indigo-brand text-cream-brand py-5 rounded-2xl font-black text-center text-lg uppercase tracking-widest shadow-xl shadow-indigo-brand/20 flex items-center justify-center gap-3"
-                >
-                  <MessageSquare size={20} /> İLETİŞİM
-                </Link>
               </div>
             </div>
           </motion.div>

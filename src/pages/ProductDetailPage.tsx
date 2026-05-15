@@ -40,7 +40,7 @@ export default function ProductDetailPage() {
             </div>
             {product.bestSeller && (
               <div className="absolute top-8 left-8 bg-indigo-brand text-cream-brand px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-xl">
-                En Çok Satan
+                En Çok Sevilen
               </div>
             )}
           </motion.div>
