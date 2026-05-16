@@ -87,14 +87,8 @@ export default function CampaignsPage() {
               E-bültenimize kaydolun, yeni kampanyalardan ve etkinliklerden ilk siz haberdar olun.
             </p>
             <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="E-posta adresiniz" 
-                className="flex-1 bg-white/10 border border-white/20 p-4 rounded-full outline-none focus:bg-white/20 transition-all text-white placeholder:text-white/40"
-              />
-              <button className="bg-gold-brand text-indigo-brand px-8 py-4 rounded-full font-bold hover:bg-white transition-all shrink-0">
-                Abone Ol
-              </button>
+              
+              
             </form>
           </div>
         </section>

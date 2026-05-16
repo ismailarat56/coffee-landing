@@ -121,31 +121,26 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-[4rem] overflow-hidden flex-grow aspect-square md:aspect-auto min-h-[400px] shadow-2xl border border-indigo-brand/10 relative group p-2">
-                <div className="w-full h-full rounded-[3.5rem] overflow-hidden relative bg-indigo-brand/5 flex items-center justify-center">
-                  <div className="relative w-full h-full opacity-80 group-hover:opacity-100 transition-opacity p-8 flex items-center justify-center">
+              <div className="bg-white rounded-[4rem] overflow-hidden flex-grow aspect-square md:aspect-auto min-h-[400px] shadow-2xl border border-indigo-brand/10 relative group p-6">
+                <div className="w-full h-full rounded-[3.5rem] overflow-hidden relative flex items-center justify-center p-4">
+                  <div className="relative w-full h-full flex items-center justify-center">
                     <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Map_of_Turkey.svg/2560px-Map_of_Turkey.svg.png" 
+                      src="https://bujuyollarda.com/wp-content/uploads/2025/06/turkiye-ilceler-haritasi-1024x576.jpg" 
                       alt="Türkiye Haritası" 
-                      className="w-full h-auto max-h-full object-contain rounded-3xl shadow-sm mix-blend-multiply"
+                      className="w-full h-auto max-h-full object-contain rounded-2xl shadow-lg border border-indigo-brand/5"
                     />
                     
-                    {/* Only Istanbul Marker for HQ */}
-                    <div className="absolute z-20 group -translate-x-1/2 -translate-y-1/2" style={{ left: '19%', top: '24%' }}>
-                      <div className="relative flex items-center justify-center transition-all duration-300">
-                        <div className="absolute -inset-2 bg-gold-brand rounded-full animate-ping opacity-60" />
-                        <div className="w-12 h-12 rounded-full flex items-center justify-center border-[3px] shadow-xl transition-colors relative z-10 bg-gold-brand border-white">
-                          <MapPin size={20} className="text-white" fill="currentColor" />
+                    {/* HQ Marker - Istanbul */}
+                    <div className="absolute z-20 -translate-x-1/2 -translate-y-1/2" style={{ left: '19%', top: '24%' }}>
+                      <div className="relative flex flex-col items-center">
+                        <div className="w-8 h-8 rounded-full bg-gold-brand flex items-center justify-center border-4 border-white shadow-2xl scale-110">
+                          <div className="w-2 h-2 bg-white rounded-full animate-ping" />
+                        </div>
+                        <div className="absolute top-full mt-3 bg-indigo-brand text-white px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest shadow-2xl whitespace-nowrap">
+                          Genel Merkez
                         </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  {/* Overlay text */}
-                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
-                  <div className="absolute bottom-8 left-8 right-8 text-center text-indigo-brand z-10 pointer-events-none">
-                    <p className="text-xs font-black uppercase tracking-[0.3em] text-gold-brand mb-2">Genel Merkezimiz</p>
-                    <h5 className="font-serif text-3xl font-bold">Beyoğlu, İstanbul</h5>
                   </div>
                 </div>
               </div>

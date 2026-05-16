@@ -1,83 +1,74 @@
 import { motion } from 'motion/react';
-import { BookOpen, Calendar, User, ArrowRight } from 'lucide-react';
-
-const BLOG_POSTS = [
-  {
-    id: 1,
-    title: 'Çekirdekten Fincana: Sürdürülebilirliğin Öyküsü',
-    excerpt: 'Çiftliklerimizden masanıza gelen kahvenin adil ticaret ve doğa dostu yöntemlerle olan yolculuğu.',
-    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop',
-    author: 'Deniz Eren',
-    date: '12 Mayıs 2026',
-    category: 'Sürdürülebilirlik'
-  },
-  {
-    id: 2,
-    title: 'Evde Mükemmel V60 Demleme Rehberi',
-    excerpt: 'Doğru sıcaklık, doğru öğütme ve o meşhur döküş tekniği ile kahvenizi profesyonelleştirin.',
-    image: 'https://images.unsplash.com/photo-1510278783471-eb17a7ac6a46?q=80&w=800&auto=format&fit=crop',
-    author: 'Mert Aksoy',
-    date: '08 Mayıs 2026',
-    category: 'Demleme Rehberi'
-  },
-  {
-    id: 3,
-    title: 'Indigo ve Altın: Marka Renklerimizin Hikayesi',
-    excerpt: 'BeeBuCoffee kimliğini oluşturan indigo mavisi ve altın sarısının temsil ettiği değerler.',
-    image: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=800&auto=format&fit=crop',
-    author: 'Selin Yılmaz',
-    date: '01 Mayıs 2026',
-    category: 'Marka Hikayesi'
-  }
-];
+import { Calendar, User, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { BLOG_POSTS } from '../data/blogData';
 
 export default function BlogPage() {
   return (
-    <main className="pt-32 pb-24 min-h-screen">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div className="space-y-4">
-            <span className="text-gold-brand font-bold uppercase tracking-[0.4em] text-sm flex items-center gap-2">
-              <BookOpen size={16} /> Okuma Köşesi
-            </span>
-            <h1 className="font-serif text-5xl font-bold text-indigo-brand">Kahve <span className="text-gold-brand italic">Kültürü</span></h1>
-            <p className="text-indigo-brand/60 max-w-lg">Markamızın kalbinden, kahve tarlalarından ve baristalarımızın sırlarından haberler.</p>
-          </div>
-          <div className="flex gap-4">
-            <button className="bg-indigo-brand text-cream-brand px-6 py-3 rounded-full text-sm font-bold">Tümü</button>
-
-          </div>
+    <main className="pt-32 pb-24 min-h-screen bg-[#FDFCFB]">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="flex flex-col items-center text-center mb-20 space-y-6">
+          <span className="text-gold-brand font-black uppercase tracking-[0.4em] text-xs">BLOG</span>
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-indigo-brand">Kahveye Dair <span className="text-gold-brand italic">Her Şey</span></h1>
+          <div className="w-24 h-1 bg-gold-brand/30 rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14">
           {BLOG_POSTS.map((post, idx) => (
             <motion.article 
               key={post.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.1, duration: 0.8 }}
               viewport={{ once: true }}
-              className="group cursor-pointer"
+              className="group bg-white rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition-all duration-500 flex flex-col h-full border border-gray-100"
             >
-              <div className="relative aspect-[16/10] rounded-[2rem] overflow-hidden mb-6 shadow-xl">
-                <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-indigo-brand px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm">
-                  {post.category}
+              <Link to={`/blog/${post.slug}`}>
+                {/* Image Container */}
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img 
+                    src={post.image} 
+                    alt={post.title} 
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+                  />
+                  <div className="absolute top-6 left-6">
+                    <span className="bg-indigo-brand text-white px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">
+                      {post.category}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-center gap-6 text-[10px] font-bold text-indigo-brand/40 uppercase tracking-widest">
-                  <span className="flex items-center gap-1.5"><Calendar size={12} className="text-gold-brand" /> {post.date}</span>
-                  <span className="flex items-center gap-1.5"><User size={12} className="text-gold-brand" /> {post.author}</span>
+              </Link>
+
+              {/* Content Container */}
+              <div className="p-8 md:p-10 flex flex-col flex-grow">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center gap-2 text-[10px] font-black text-indigo-brand/30 uppercase tracking-widest">
+                    <Calendar size={14} className="text-gold-brand/60" /> {post.date}
+                  </div>
+                  <div className="w-1 h-1 rounded-full bg-gray-200" />
+                  <div className="flex items-center gap-2 text-[10px] font-black text-indigo-brand/30 uppercase tracking-widest">
+                    <User size={14} className="text-gold-brand/60" /> {post.author}
+                  </div>
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-indigo-brand leading-tight group-hover:text-gold-brand transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-indigo-brand/60 leading-relaxed line-clamp-3">
+
+                <Link to={`/blog/${post.slug}`}>
+                  <h3 className="font-serif text-2xl md:text-3xl font-bold text-indigo-brand mb-6 leading-[1.2] group-hover:text-gold-brand transition-colors duration-300">
+                    {post.title}
+                  </h3>
+                </Link>
+                
+                <p className="text-indigo-brand/50 leading-relaxed line-clamp-3 text-base font-medium mb-10">
                   {post.excerpt}
                 </p>
-                <div className="pt-2 flex items-center gap-2 text-indigo-brand font-bold group-hover:translate-x-2 transition-transform">
-                  Devamını Oku <ArrowRight size={18} className="text-gold-brand" />
+
+                <div className="mt-auto border-t border-gray-50 pt-8">
+                  <Link to={`/blog/${post.slug}`} className="flex items-center gap-3 text-indigo-brand font-black text-xs uppercase tracking-[0.2em] group/btn">
+                    <span className="relative overflow-hidden inline-block">
+                      DEVAMINI OKU
+                      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gold-brand transform translate-x-[-105%] group-hover/btn:translate-x-0 transition-transform duration-500" />
+                    </span>
+                    <ArrowRight size={18} className="text-gold-brand group-hover/btn:translate-x-2 transition-transform duration-300" />
+                  </Link>
                 </div>
               </div>
             </motion.article>

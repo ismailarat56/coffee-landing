@@ -67,26 +67,9 @@ export default function ProductDetailPage() {
               BeeBuCoffee kalitesiyle hazırlanan bu ürün, en taze haliyle paketlenerek kapınıza kadar ulaştırılır. Detaylı tadım notları ve demleme tavsiyeleri kutu içerisinde yer almaktadır.
             </p>
 
-            <div className="flex gap-4">
-              <button className="flex-1 bg-indigo-brand text-cream-brand py-5 rounded-3xl font-bold flex items-center justify-center gap-3 hover:bg-gold-brand transition-all shadow-xl shadow-indigo-brand/20 active:scale-95 text-lg">
-                <ShoppingCart size={24} /> Sepete Ekle
-              </button>
-            </div>
+            
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-indigo-brand/10">
-              <div className="flex flex-col items-center text-center gap-2 p-4 rounded-2xl bg-white/50 border border-indigo-brand/5 shadow-sm">
-                <Truck size={20} className="text-gold-brand" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-brand/60">Hızlı Teslimat</span>
-              </div>
-              <div className="flex flex-col items-center text-center gap-2 p-4 rounded-2xl bg-white/50 border border-indigo-brand/5 shadow-sm">
-                <ShieldCheck size={20} className="text-gold-brand" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-brand/60">Güvenli Ödeme</span>
-              </div>
-              <div className="flex flex-col items-center text-center gap-2 p-4 rounded-2xl bg-white/50 border border-indigo-brand/5 shadow-sm">
-                <RefreshCcw size={20} className="text-gold-brand" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-brand/60">Kolay İade</span>
-              </div>
-            </div>
+           
           </motion.div>
         </div>
 

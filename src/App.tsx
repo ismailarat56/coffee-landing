@@ -12,6 +12,7 @@ import ShopPage from './pages/ShopPage';
 import ExplorePage from './pages/ExplorePage';
 import MenuPage from './pages/MenuPage';
 import BlogPage from './pages/BlogPage';
+import BlogDetailPage from './pages/BlogDetailPage';
 import CampaignsPage from './pages/CampaignsPage';
 import EventsPage from './pages/EventsPage';
 import ContactPage from './pages/ContactPage';
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="/explore" element={<ExplorePage />} />
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogDetailPage />} />
             <Route path="/campaigns" element={<CampaignsPage />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/contact" element={<ContactPage />} />

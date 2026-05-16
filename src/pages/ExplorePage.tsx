@@ -51,13 +51,13 @@ export default function ExplorePage() {
           {/* Interactive Map Component */}
           <div className="lg:col-span-8 bg-white rounded-[3rem] overflow-hidden min-h-[500px] lg:min-h-[600px] relative shadow-2xl p-4 md:p-8 flex flex-col items-center border border-indigo-brand/10">
             {/* Map Container */}
-            <div className="relative w-full h-full min-h-[400px] lg:min-h-[500px] rounded-[2.5rem] flex items-center justify-center">
+            <div className="relative w-full h-full min-h-[400px] lg:min-h-[500px] rounded-[2.5rem] flex items-center justify-center p-4">
               
-              <div className="relative w-full max-w-4xl opacity-80 group-hover:opacity-100 transition-opacity">
+              <div className="relative w-full max-w-5xl">
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Map_of_Turkey.svg/2560px-Map_of_Turkey.svg.png" 
+                  src="https://bujuyollarda.com/wp-content/uploads/2025/06/turkiye-ilceler-haritasi-1024x576.jpg" 
                   alt="Türkiye Haritası" 
-                  className="w-full h-auto rounded-3xl shadow-sm mix-blend-multiply"
+                  className="w-full h-auto rounded-2xl shadow-lg border border-indigo-brand/10"
                 />
 
                 {/* Branch Markers */}
@@ -70,30 +70,23 @@ export default function ExplorePage() {
                       onClick={() => setSelectedBranch(branch)}
                       className="absolute z-20 group -translate-x-1/2 -translate-y-1/2"
                       style={{ left: `${branch.coordinates?.x}%`, top: `${branch.coordinates?.y}%` }}
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 1.2 }}
                     >
-                      <div className={cn(
-                        "relative flex items-center justify-center transition-all duration-300",
-                        isSelected ? "scale-125 z-30" : "z-10"
-                      )}>
+                      <div className="relative flex flex-col items-center">
                         <div className={cn(
-                          "absolute -inset-2 bg-gold-brand rounded-full animate-ping opacity-40",
-                          isSelected ? "opacity-60" : "opacity-0 group-hover:opacity-40"
-                        )} />
-                        <div className={cn(
-                          "w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border-[3px] shadow-xl transition-colors relative z-10",
-                          isSelected ? "bg-gold-brand border-white" : "bg-indigo-brand border-white group-hover:bg-gold-brand"
+                          "w-6 h-6 rounded-full flex items-center justify-center border-2 border-white shadow-lg transition-all",
+                          isSelected ? "bg-gold-brand scale-125" : "bg-indigo-brand group-hover:bg-gold-brand"
                         )}>
-                          <Coffee size={16} className="text-white" />
+                          <div className="w-2 h-2 bg-white rounded-full" />
                         </div>
-                      </div>
-                      
-                      {/* Tooltip */}
-                      <div className={cn(
-                        "absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white text-indigo-brand px-4 py-2 rounded-2xl shadow-xl transition-all whitespace-nowrap z-50 border border-indigo-brand/5",
-                        isSelected ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-none"
-                      )}>
-                        <p className="text-xs font-black uppercase tracking-widest">{branch.city}</p>
+                        
+                        {/* Simple Label */}
+                        <div className={cn(
+                          "absolute top-full mt-2 bg-indigo-brand text-white px-3 py-1 rounded-lg text-[10px] font-bold whitespace-nowrap shadow-xl transition-all",
+                          isSelected ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0"
+                        )}>
+                          {branch.city}
+                        </div>
                       </div>
                     </motion.button>
                   );
@@ -119,14 +112,7 @@ export default function ExplorePage() {
                       <h3 className="text-2xl font-serif font-bold text-indigo-brand">{selectedBranch.city} Şubesi</h3>
                       <p className="text-indigo-brand/60 text-sm leading-relaxed max-w-md">{selectedBranch.address}</p>
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto mt-4 md:mt-0">
-                      <button className="flex-1 md:flex-none bg-gold-brand text-indigo-brand px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-gold-brand/90 transition-all active:scale-95 shadow-xl shadow-gold-brand/10">
-                        <Navigation size={16} /> YOL TARİFİ
-                      </button>
-                      <button className="flex-1 md:flex-none bg-white border border-indigo-brand/10 text-indigo-brand px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-gray-50 transition-all active:scale-95">
-                        <Phone size={16} /> İLETİŞİM
-                      </button>
-                    </div>
+                    
                   </div>
                 </motion.div>
               )}

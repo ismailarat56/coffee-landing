@@ -36,9 +36,10 @@ export function ProductCard({ product, className }: ProductCardProps) {
         </div>
       </Link>
 
-      <div className="p-8">
-        <div className="flex justify-between items-center mb-3">
+      <div className="p-8 text-center flex flex-col items-center">
+        <div className="flex justify-center items-center gap-4 mb-3 w-full">
           <span className="text-[10px] font-black text-gold-brand uppercase tracking-[0.2em]">{product.category}</span>
+          <div className="w-1.5 h-1.5 rounded-full bg-gold-brand/20" />
           <span className="font-serif font-black text-indigo-brand text-lg">₺{product.price}</span>
         </div>
         <Link to={`/product/${product.id}`}>
@@ -48,7 +49,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
           {product.description}
         </p>
         
-        <div className="flex items-center justify-between gap-4 pt-4 border-t border-indigo-brand/5">
+        <div className="flex items-center justify-center gap-4 pt-4 border-t border-indigo-brand/5 w-full">
           
         </div>
       </div>

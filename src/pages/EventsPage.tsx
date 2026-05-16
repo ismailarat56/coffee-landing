@@ -77,9 +77,7 @@ export default function EventsPage() {
                     >
                       Detayları Gör <ArrowRight size={20} />
                     </Link>
-                    <button className="text-indigo-brand font-black text-xs uppercase tracking-widest border-b-2 border-gold-brand pb-1 hover:text-gold-brand transition-colors">
-                      Takvime Ekle
-                    </button>
+                    
                   </div>
                 </div>
               </div>
@@ -96,9 +94,7 @@ export default function EventsPage() {
             <p className="text-cream-brand/60 max-w-xl mx-auto">
               Workshop alanlarımızı kiralamak veya iş birliği yapmak için bizimle iletişime geçebilirsiniz.
             </p>
-            <button className="bg-white text-indigo-brand px-12 py-4 rounded-full font-bold hover:bg-gold-brand hover:text-white transition-all shadow-xl">
-              İş Birliği Formu
-            </button>
+            
           </div>
         </section>
       </div>

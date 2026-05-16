@@ -294,7 +294,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
+          <div className="flex flex-wrap justify-center gap-20 lg:gap-32">
             {bestSellers.map((product, idx) => (
               <motion.div
                 key={product.id}
@@ -302,6 +302,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 viewport={{ once: true }}
+                className="w-full sm:w-[calc(50%-6rem)] lg:w-[calc(33.333%-8rem)] min-w-[300px] max-w-[380px]"
               >
                 <ProductCard product={product} />
               </motion.div>

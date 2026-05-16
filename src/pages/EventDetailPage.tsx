@@ -88,15 +88,6 @@ export default function EventDetailPage() {
                   {event.details}
                 </p>
               </div>
-
-              <div className="flex flex-wrap gap-4 pt-6">
-                <button className="flex-1 bg-indigo-brand text-cream-brand py-5 rounded-[2rem] font-bold text-lg hover:bg-gold-brand transition-all shadow-2xl shadow-indigo-brand/20 active:scale-95 flex items-center justify-center gap-3">
-                  <Ticket size={24} /> Kayıt Ol / Bilet Al
-                </button>
-                <button className="p-5 border-2 border-indigo-brand/10 text-indigo-brand rounded-[2rem] hover:bg-indigo-brand/5 transition-all">
-                  <Share2 size={24} />
-                </button>
-              </div>
             </div>
           </motion.div>
         </div>

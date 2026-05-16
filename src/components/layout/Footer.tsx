@@ -34,21 +34,12 @@ export function Footer() {
               <li><Link to="/" className="hover:text-gold-brand transition-colors">Ana Sayfa</Link></li>
               <li><Link to="/shop" className="hover:text-gold-brand transition-colors">Mağaza</Link></li>
               <li><Link to="/explore" className="hover:text-gold-brand transition-colors">Şubelerimiz</Link></li>
-              <li><a href="#" className="hover:text-gold-brand transition-colors">Kariyer</a></li>
+
               <li><Link to="/contact" className="hover:text-gold-brand transition-colors">İletişim</Link></li>
             </ul>
           </div>
 
-          {/* Categories */}
-          <div className="space-y-6">
-            <h4 className="font-semibold text-lg border-b border-gold-brand w-fit pb-1">Ürün Grupları</h4>
-            <ul className="space-y-3 text-cream-brand/70 text-sm">
-              <li><Link to="/shop" className="hover:text-gold-brand transition-colors">Yöresel Kahveler</Link></li>
-              <li><Link to="/shop" className="hover:text-gold-brand transition-colors">Termoslar</Link></li>
-              <li><Link to="/shop" className="hover:text-gold-brand transition-colors">V60 & Chemex</Link></li>
-              <li><Link to="/shop" className="hover:text-gold-brand transition-colors">Kahve Aksesuarları</Link></li>
-            </ul>
-          </div>
+ 
 
           {/* Contact */}
           <div className="space-y-6">

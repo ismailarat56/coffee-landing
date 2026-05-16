@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
     description: 'Akışkan iç dokusu ve yanık üst yüzeyi ile efsane lezzet.',
     price: 165,
     category: 'bakery',
-    image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1635327173758-85badf17f995?q=80&w=1127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     bestSeller: true,
   },
   {
@@ -60,7 +60,7 @@ export const PRODUCTS: Product[] = [
     description: 'İçeceklerinizi 12 saat sıcak, 24 saat soğuk tutan sızdırmaz tasarım.',
     price: 1250,
     category: 'thermos',
-    image: 'https://images.unsplash.com/photo-1594411133583-b7897f1f9643?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1670378948405-37c0b4a72bf3?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     bestSeller: true,
   },
   {
@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
     description: 'Evde profesyonel kahve demlemenin en şık yolu.',
     price: 850,
     category: 'accessory',
-    image: 'https://images.unsplash.com/photo-1544666107-160fa1f9745e?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1622088891722-c6f91b80627f?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   }
 ];
 
@@ -134,7 +134,7 @@ export const EVENTS = [
     time: '20:00',
     type: 'Konser',
     description: 'Şehrin gürültüsünden uzak, en kaliteli caz tınıları ve taze demlenmiş kahve kokusu eşliğinde unutulmaz bir akşam. Yerel caz sanatçılarımızın performansıyla ruhunuzu dinlendirin.',
-    image: 'https://images.unsplash.com/photo-1514525253361-bee8718a300c?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop',
     price: 'Ücretsiz',
     capacity: '40 Kişi',
     details: 'Etkinliğimiz sınırlı kontenjan ile gerçekleşecektir. Katılım için sayfanın altındaki formdan veya şubemizden kayıt yaptırmanız rica olunur.'
@@ -147,7 +147,7 @@ export const EVENTS = [
     time: '14:00',
     type: 'Workshop',
     description: 'Kahvenin üzerine sanat yapmaya hazır mısınız? Temel süt köpürtme tekniklerinden karmaşık desenlere kadar latte art dünyasını keşfedeceğiniz uygulamalı bir eğitim.',
-    image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?q=80&w=800&auto=format&fit=crop',
     price: '₺450',
     capacity: '8 Kişi',
     details: 'Tüm malzemeler tarafımızdan karşılanacaktır. Katılımcılara workshop sonunda BeeBuCoffee katılım sertifikası verilecektir.'
@@ -160,7 +160,7 @@ export const EVENTS = [
     time: '11:00',
     type: 'Eğitim',
     description: 'V60, Chemex ve Aeropress... Evde profesyonel kahve demlemenin sırlarını uzman baristalarımızdan öğrenin. Doğru öğütme, su sıcaklığı ve süre dengesini keşfedin.',
-    image: 'https://images.unsplash.com/photo-1544666107-160fa1f9745e?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop',
     price: '₺300',
     capacity: '12 Kişi',
     details: 'Eğitim sonunda tercih ettiğiniz bir yöresel çekirdek 250gr hediye edilecektir.'

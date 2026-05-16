@@ -33,7 +33,7 @@ export default function MenuPage() {
               <div className="w-24 h-[2px] bg-gold-brand/40 mt-2" />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="flex flex-wrap justify-center gap-16 lg:gap-24">
               {PRODUCTS.filter(p => 
                 category.id === 'coffee' ? p.category === 'coffee' && !p.name.toLowerCase().includes('iced') && !p.name.toLowerCase().includes('cold') :
                 category.id === 'cold' ? (p.category === 'coffee' && (p.name.toLowerCase().includes('iced') || p.name.toLowerCase().includes('cold'))) :
@@ -46,6 +46,7 @@ export default function MenuPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1 }}
                   viewport={{ once: true }}
+                  className="w-full sm:w-[calc(50%-4rem)] lg:w-[calc(25%-6rem)] min-w-[280px] max-w-[320px]"
                 >
                   <ProductCard product={product} />
                 </motion.div>
