@@ -77,7 +77,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-indigo-brand/60 text-lg md:text-2xl max-w-xl leading-relaxed font-medium">
-              BeeBuCoffee ile çiftlikten fincana, her yudumda gerçek kahve deneyimini keşfedin. Artizan yöntemlerle kavrulan çekirdeklerimizle sabahlarınızı bir sanata dönüştürün.
+              Çiftlikten fincana uzanan artizan kahve yolculuğuyla sabahlarınızı sanata dönüştürün.
             </p>
             
             <div className="flex flex-wrap gap-6">

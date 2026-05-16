@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { Tag, Sparkles, Clock, ArrowRight } from 'lucide-react';
+import { Tag, Sparkles, Clock } from 'lucide-react';
+import { cn } from '../lib/utils';
 
 const CAMPAIGNS = [
   {
@@ -7,7 +8,7 @@ const CAMPAIGNS = [
     title: 'Sabah Neşesi: %20 İndirim',
     description: 'Hergün 08:00 - 10:00 saatleri arasında tüm sıcak kahvelerde geçerli özel indirim.',
     dateRange: 'Süresiz',
-    image: 'https://images.unsplash.com/photo-1541167760496-16295cb7c726?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop',
     color: 'bg-gold-brand'
   },
   {
@@ -23,7 +24,7 @@ const CAMPAIGNS = [
     title: 'Mağaza Alışverişlerinde Ücretsiz Kargo',
     description: 'Termos ve aksesuar alışverişlerinizde 1500 TL ve üzeri siparişlerde kargo ücreti ödemeyin.',
     dateRange: 'Haziran sonuna kadar',
-    image: 'https://images.unsplash.com/photo-1517554558204-bc6750059c25?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop',
     color: 'bg-indigo-brand'
   }
 ];
@@ -73,9 +74,6 @@ export default function CampaignsPage() {
                 <div className="flex items-center gap-2 text-[10px] font-bold text-indigo-brand/40 uppercase tracking-widest bg-indigo-brand/5 w-fit px-4 py-2 rounded-full">
                   <Clock size={14} className="text-gold-brand" /> Geçerlilik: {campaign.dateRange}
                 </div>
-                <button className="flex items-center gap-3 text-indigo-brand font-bold hover:text-gold-brand transition-colors group mt-4">
-                  Kampanyaya Katıl <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
-                </button>
               </div>
             </motion.div>
           ))}
@@ -104,5 +102,3 @@ export default function CampaignsPage() {
     </main>
   );
 }
-
-import { cn } from '../lib/utils';

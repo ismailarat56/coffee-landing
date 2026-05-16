@@ -15,7 +15,7 @@ const BLOG_POSTS = [
     id: 2,
     title: 'Evde Mükemmel V60 Demleme Rehberi',
     excerpt: 'Doğru sıcaklık, doğru öğütme ve o meşhur döküş tekniği ile kahvenizi profesyonelleştirin.',
-    image: 'https://images.unsplash.com/photo-1544666107-160fa1f9745e?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1510278783471-eb17a7ac6a46?q=80&w=800&auto=format&fit=crop',
     author: 'Mert Aksoy',
     date: '08 Mayıs 2026',
     category: 'Demleme Rehberi'
@@ -45,8 +45,7 @@ export default function BlogPage() {
           </div>
           <div className="flex gap-4">
             <button className="bg-indigo-brand text-cream-brand px-6 py-3 rounded-full text-sm font-bold">Tümü</button>
-            <button className="border border-indigo-brand/10 text-indigo-brand/60 px-6 py-3 rounded-full text-sm font-bold hover:bg-indigo-brand/5">Haberler</button>
-            <button className="border border-indigo-brand/10 text-indigo-brand/60 px-6 py-3 rounded-full text-sm font-bold hover:bg-indigo-brand/5">Rehberler</button>
+
           </div>
         </div>
 
@@ -98,9 +97,7 @@ export default function BlogPage() {
                 Bizim için her çekirdek bir hikaye anlatır; toprağından, yağmurundan, çiftçisinin ellerinden taşınan bir hikaye. Görevimiz ise bu hikayeyi en doğru notalarla sizin fincanınıza ulaştırmak.
               </p>
             </div>
-            <button className="border-2 border-indigo-brand text-indigo-brand px-10 py-4 rounded-full font-bold hover:bg-indigo-brand hover:text-cream-brand transition-all">
-              Tarihimizin Derinlikleri
-            </button>
+            
           </div>
         </section>
       </div>

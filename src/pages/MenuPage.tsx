@@ -59,9 +59,7 @@ export default function MenuPage() {
             <h3 className="text-2xl font-serif font-bold">Özel Bir Talebiniz mi Var?</h3>
             <p className="text-cream-brand/60">Alerjen bilgilerimiz ve özel siparişleriniz için ekiplerimize danışabilirsiniz.</p>
           </div>
-          <button className="bg-gold-brand text-cream-brand px-10 py-4 rounded-full font-bold hover:bg-white hover:text-indigo-brand transition-all">
-            Besin Tablosunu İncele
-          </button>
+          
         </section>
       </div>
     </main>

@@ -43,7 +43,6 @@ export default function ExplorePage() {
                 <p className="text-indigo-brand/50 text-sm mb-4 leading-relaxed line-clamp-2">{branch.address}</p>
                 <div className="flex items-center gap-4 text-xs font-bold text-gold-brand">
                   <span className="flex items-center gap-1"><Clock size={14} /> 08:00 - 23:00</span>
-                  <span className="flex items-center gap-1"><Navigation size={14} /> 2.4 km</span>
                 </div>
               </button>
             ))}
@@ -56,7 +55,7 @@ export default function ExplorePage() {
               
               <div className="relative w-full max-w-4xl opacity-80 group-hover:opacity-100 transition-opacity">
                 <img 
-                  src="https://wsrv.nl/?url=www.ismailbasoglu.com.tr/wp-content/uploads/2014/09/SnapCrab_No-0000-e1409569320125.jpg" 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Map_of_Turkey.svg/2560px-Map_of_Turkey.svg.png" 
                   alt="Türkiye Haritası" 
                   className="w-full h-auto rounded-3xl shadow-sm mix-blend-multiply"
                 />

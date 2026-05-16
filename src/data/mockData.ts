@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
     description: 'Akışkan iç dokusu ve yanık üst yüzeyi ile efsane lezzet.',
     price: 165,
     category: 'bakery',
-    image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800&auto=format&fit=crop',
     bestSeller: true,
   },
   {
@@ -60,7 +60,7 @@ export const PRODUCTS: Product[] = [
     description: 'İçeceklerinizi 12 saat sıcak, 24 saat soğuk tutan sızdırmaz tasarım.',
     price: 1250,
     category: 'thermos',
-    image: 'https://images.unsplash.com/photo-1622312674987-9a4891b94ea8?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1594411133583-b7897f1f9643?q=80&w=800&auto=format&fit=crop',
     bestSeller: true,
   },
   {
@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
     description: 'Evde profesyonel kahve demlemenin en şık yolu.',
     price: 850,
     category: 'accessory',
-    image: 'https://images.unsplash.com/photo-1510278783471-eb17a7ac6a46?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1544666107-160fa1f9745e?q=80&w=800&auto=format&fit=crop',
   }
 ];
 

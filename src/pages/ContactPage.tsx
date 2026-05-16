@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { MessageSquare, Phone, Mail, MapPin, Instagram, Facebook, Twitter, Youtube, ArrowUpRight } from 'lucide-react';
 import { cn } from '../lib/utils';
-import { BRANCHES } from '../data/mockData';
 
 const CONTACT_METHODS = [
   {
@@ -104,22 +103,6 @@ export default function ContactPage() {
                 ))}
               </div>
             </section>
-
-            <section className="bg-white p-12 lg:p-16 rounded-[4rem] shadow-[0_50px_100px_rgba(40,40,70,0.1)] border border-indigo-brand/5 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gold-brand/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-1000" />
-              <h3 className="font-serif text-3xl font-bold text-indigo-brand mb-8 tracking-tight">Hızlı Mesaj Gönder</h3>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <input type="text" placeholder="Adınız" className="bg-cream-brand/50 border border-indigo-brand/5 p-5 rounded-3xl outline-none focus:ring-4 focus:ring-gold-brand/20 w-full font-medium transition-all" />
-                  <input type="email" placeholder="E-posta" className="bg-cream-brand/50 border border-indigo-brand/5 p-5 rounded-3xl outline-none focus:ring-4 focus:ring-gold-brand/20 w-full font-medium transition-all" />
-                </div>
-                <input type="text" placeholder="Konu" className="bg-cream-brand/50 border border-indigo-brand/5 p-5 rounded-3xl outline-none focus:ring-4 focus:ring-gold-brand/20 w-full font-medium transition-all" />
-                <textarea placeholder="Mesajınız" rows={4} className="bg-cream-brand/50 border border-indigo-brand/5 p-5 rounded-3xl outline-none focus:ring-4 focus:ring-gold-brand/20 w-full resize-none font-medium transition-all" />
-                <button className="w-full bg-indigo-brand text-cream-brand py-6 rounded-3xl font-black text-lg uppercase tracking-[0.2em] hover:bg-gold-brand transition-all shadow-xl shadow-indigo-brand/20 active:scale-95">
-                  GÖNDER
-                </button>
-              </form>
-            </section>
           </div>
 
           <div className="space-y-8 h-full">
@@ -142,7 +125,7 @@ export default function ContactPage() {
                 <div className="w-full h-full rounded-[3.5rem] overflow-hidden relative bg-indigo-brand/5 flex items-center justify-center">
                   <div className="relative w-full h-full opacity-80 group-hover:opacity-100 transition-opacity p-8 flex items-center justify-center">
                     <img 
-                      src="https://wsrv.nl/?url=www.ismailbasoglu.com.tr/wp-content/uploads/2014/09/SnapCrab_No-0000-e1409569320125.jpg" 
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Map_of_Turkey.svg/2560px-Map_of_Turkey.svg.png" 
                       alt="Türkiye Haritası" 
                       className="w-full h-auto max-h-full object-contain rounded-3xl shadow-sm mix-blend-multiply"
                     />

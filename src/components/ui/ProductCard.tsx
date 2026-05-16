@@ -49,9 +49,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
         </p>
         
         <div className="flex items-center justify-between gap-4 pt-4 border-t border-indigo-brand/5">
-          <button className="flex-1 bg-indigo-brand text-cream-brand py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 hover:bg-gold-brand transition-all active:scale-95">
-            <ShoppingCart size={16} /> Sepete Ekle
-          </button>
+          
         </div>
       </div>
     </motion.div>
