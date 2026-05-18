@@ -38,7 +38,8 @@
 
 ## 🖼 Ekran Görüntüleri
   
- | ![Home](./public/screenshots/home.png) | ![Shop](./public/screenshots/shop.png)|
+| ![Home](./public/screenshots/home.png) | ![Blog](./public/screenshots/blog.png) |
+
 
 
          
