@@ -327,7 +327,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-wrap justify-center gap-6">
                 <Link to="/shop" className="bg-gold-brand text-indigo-brand px-12 py-6 rounded-[2rem] font-black text-xl hover:bg-white transition-all active:scale-95 shadow-2xl shadow-black/20 uppercase tracking-widest">
-                  ALIVERİŞE BAŞLA
+                  MAĞAZAYI GÖRÜNTÜLE
                 </Link>
                 <Link to="/explore" className="bg-white/10 backdrop-blur-xl border border-white/20 text-cream-brand px-12 py-6 rounded-[2rem] font-black text-xl hover:bg-white/20 transition-all uppercase tracking-widest">
                   ŞUBELERİMİZ
