@@ -1,59 +1,24 @@
  #  BeeBuCoffee 
-       2
-       5 - # Run and deploy your AI Studio app
-       3 + BeeBuCoffee, "Çiftlikten Fincana" mottosuyla yola çıkan, modern kahve tutkunları için tasarlanmış,
+ 
+ > BeeBuCoffee, "Çiftlikten Fincana" mottosuyla yola çıkan, modern kahve tutkunları için tasarlanmış,
          estetik ve kullanıcı dostu bir landing page / e-ticaret platformu prototipidir.
-       4
-       7 - This contains everything you need to run your app locally.
-       5 + ---
-       6
-       9 - View your app in AI Studio: https://ai.studio/apps/77d50d4e-923e-4fa5-8503-257bf46717ab
-       7 + ## 🚀 Proje Hakkında
-       8 + Bu proje, butik bir kahve markasının dijital kimliğini oluşturmak amacıyla geliştirilmiştir.
+ ## 🚀 Proje Hakkında
+ +  Bu proje, butik bir kahve markasının dijital kimliğini oluşturmak amacıyla geliştirilmiştir.
          Kullanıcıların ürünleri inceleyebileceği, blog yazılarını okuyabileceği, şubeleri harita üzerinden
          keşfedebileceği ve etkinlikleri takip edebileceği kapsamlı bir web uygulamasıdır.
-       9
-      11 - ## Run Locally
-      10 + ## 🛠 Kullanılan Teknolojiler
-      11 + Proje, modern web teknolojileri ve kütüphaneleri kullanılarak inşa edilmiştir:
-      12
-      13 - **Prerequisites:**  Node.js
-      13 + *   **Frontend:** React 19 (TypeScript)
-      14 + *   **Build Tool:** Vite
-      15 + *   **Styling:** Tailwind CSS 4 (Modern ve hızlı tasarım)
-      16 + *   **Animations:** Framer Motion (Akıcı ve premium geçişler)
-      17 + *   **Icons:** Lucide React
-      18 + *   **Routing:** React Router 7
-      19 + *   **Fonts:** Serif ve Sans-serif kombinasyonu (Estetik tipografi)
-      20
-      21 + ## 📦 Kurulum Adımları
-      22 + Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
-      23
-      16 - 1. Install dependencies:
-      17 -    `npm install`
-      18 - 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-      19 - 3. Run the app:
-      20 -    `npm run dev`
-      24 + 1.  **Depoyu Klonlayın:**
-      25 +     ```bash
-      26 +     git clone https://github.com/kullaniciadi/beebu-coffee.git
-      27 +     cd beebu-coffee
-      28 +     ```
-      29 + 
-      30 + 2.  **Bağımlılıkları Yükleyin:**
-      31 +     ```bash
-      32 +     npm install
-      33 +     ```
-      34 + 
-      35 + ## 🏃‍♂️ Çalıştırma Adımları
-      36 + Geliştirme sunucusunu başlatmak için:
-      37 + 
-      38 + ```bash
-      39 + npm run dev
-      40 + ```
-      41 + Uygulama varsayılan olarak `http://localhost:3000` adresinde çalışacaktır.
-      42 + 
-      43 + ## ✨ Proje Özellikleri
+
+## 🛠 Kullanılan Teknolojiler
+
+*   **Prerequisites:**  Node.js
+*   **Frontend:** React 19 (TypeScript)
+*   **Build Tool:** Vite
+*   **Styling:** Tailwind CSS 4 (Modern ve hızlı tasarım)
+*   **Animations:** Framer Motion (Akıcı ve premium geçişler)
+*   **Icons:** Lucide React
+*   **Routing:** React Router 7
+*   **Fonts:** Serif ve Sans-serif kombinasyonu (Estetik tipografi)
+
+## ✨ Proje Özellikleri
       44 + *   **Responsive Tasarım:** Tüm cihazlarda (Mobil, Tablet, Masaüstü) kusursuz görünüm.
       45 + *   **Dinamik Blog Sistemi:** SEO dostu slug yapısına sahip, ferah tipografili blog detay
          sayfaları.
