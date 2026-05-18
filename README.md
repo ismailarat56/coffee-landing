@@ -1,8 +1,4 @@
- 1 - <div align="center">
-       2 - <img width="1200" height="475" alt="GHBanner"
-         src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-       3 - </div>
-       1 + # ☕ BeeBuCoffee - Artizan Kahve Deneyimi
+ #  BeeBuCoffee 
        2
        5 - # Run and deploy your AI Studio app
        3 + BeeBuCoffee, "Çiftlikten Fincana" mottosuyla yola çıkan, modern kahve tutkunları için tasarlanmış,
