@@ -40,13 +40,14 @@
 ## 🖼 Ekran Görüntüleri
   
  | ![Home](./public/screenshots/home.png) | ![Shop](./public/screenshots/shop.png)|
-         ![Shop](https://via.placeholder.com/400x250?text=BeeBu+Shop) |
-         ![Blog](https://via.placeholder.com/400x250?text=BeeBu+Blog) |
-## 🔗 GitHub Repo Bilgisi
-      67 + *   **Repo URL:**
-         [https://github.com/kullaniciadi/beebu-coffee](https://github.com/kullaniciadi/beebu-coffee)
-      68 + *   **Lisans:** Apache-2.0
-      69 + 
+
+
+         
+## Links
+
+- [GitHub Repository](https://github.com/ismailarat56/coffee-landing)
+
+
 ## 👨‍💻 Geliştirici Notları
       71 + *   Projede **Tailwind CSS 4**'ün yeni özellikleri kullanılarak stil dosyaları minimize edilmiştir.
       72 + *   Kod yapısı **Component-Based Architecture** (Bileşen Tabanlı Mimari) prensiplerine uygun olarak
