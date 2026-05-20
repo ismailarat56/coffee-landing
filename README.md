@@ -20,31 +20,8 @@ Proje, modern web teknolojileri ve kütüphaneleri kullanılarak inşa edilmişt
 *   **Icons:** Lucide React
 *   **Routing:** React Router 7
 *   **Maps:** Google Maps iframe embed
+*
 
-## Kurulum Adımları
-
-Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
-
-1.  **Depoyu Klonlayın:**
-    ```bash
-    git clone https://github.com/ismailarat56/coffee-landing.git
-    cd coffee-landing
-    ```
-
-2.  **Bağımlılıkları Yükleyin:**
-    ```bash
-    npm install
-    ```
-
-## Çalıştırma Adımları
-
-Geliştirme sunucusunu başlatmak için:
-
-```bash
-npm run dev
-```
-
-Uygulama varsayılan olarak `http://localhost:3000` adresinde çalışacaktır.
 
 ## Proje Özellikleri
 
