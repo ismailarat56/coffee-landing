@@ -20,7 +20,6 @@ Proje, modern web teknolojileri ve kütüphaneleri kullanılarak inşa edilmişt
 *   **Icons:** Lucide React
 *   **Routing:** React Router 7
 *   **Maps:** Google Maps iframe embed
-*
 
 
 ## Proje Özellikleri
