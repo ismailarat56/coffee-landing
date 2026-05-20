@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, Navigation, Phone, Clock, ExternalLink, Coffee } from 'lucide-react';
+import { MapPin, Clock, Coffee } from 'lucide-react';
 import { BRANCHES } from '../data/mockData';
 import { Branch } from '../types';
 import { cn } from '../lib/utils';
+import { BranchGoogleMap } from '../components/maps/BranchGoogleMap';
 
 export default function ExplorePage() {
   const [selectedBranch, setSelectedBranch] = useState<Branch | null>(BRANCHES[0]);
@@ -50,49 +51,12 @@ export default function ExplorePage() {
 
           {/* Interactive Map Component */}
           <div className="lg:col-span-8 bg-white rounded-[3rem] overflow-hidden min-h-[500px] lg:min-h-[600px] relative shadow-2xl p-4 md:p-8 flex flex-col items-center border border-indigo-brand/10">
-            {/* Map Container */}
-            <div className="relative w-full h-full min-h-[400px] lg:min-h-[500px] rounded-[2.5rem] flex items-center justify-center p-4">
-              
-              <div className="relative w-full max-w-5xl">
-                <img 
-                  src="https://bujuyollarda.com/wp-content/uploads/2025/06/turkiye-ilceler-haritasi-1024x576.jpg" 
-                  alt="Türkiye Haritası" 
-                  className="w-full h-auto rounded-2xl shadow-lg border border-indigo-brand/10"
-                />
-
-                {/* Branch Markers */}
-                {BRANCHES.map((branch) => {
-                  const isSelected = selectedBranch?.id === branch.id;
-
-                  return (
-                    <motion.button
-                      key={branch.id}
-                      onClick={() => setSelectedBranch(branch)}
-                      className="absolute z-20 group -translate-x-1/2 -translate-y-1/2"
-                      style={{ left: `${branch.coordinates?.x}%`, top: `${branch.coordinates?.y}%` }}
-                      whileHover={{ scale: 1.2 }}
-                    >
-                      <div className="relative flex flex-col items-center">
-                        <div className={cn(
-                          "w-6 h-6 rounded-full flex items-center justify-center border-2 border-white shadow-lg transition-all",
-                          isSelected ? "bg-gold-brand scale-125" : "bg-indigo-brand group-hover:bg-gold-brand"
-                        )}>
-                          <div className="w-2 h-2 bg-white rounded-full" />
-                        </div>
-                        
-                        {/* Simple Label */}
-                        <div className={cn(
-                          "absolute top-full mt-2 bg-indigo-brand text-white px-3 py-1 rounded-lg text-[10px] font-bold whitespace-nowrap shadow-xl transition-all",
-                          isSelected ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0"
-                        )}>
-                          {branch.city}
-                        </div>
-                      </div>
-                    </motion.button>
-                  );
-                })}
-              </div>
-            </div>
+            <BranchGoogleMap
+              branches={BRANCHES}
+              selectedBranch={selectedBranch}
+              onSelectBranch={(branch) => setSelectedBranch(branch)}
+              className="min-h-[400px] lg:min-h-[500px]"
+            />
 
             {/* Selection Card (Bottom overlay) */}
             <AnimatePresence mode="wait">

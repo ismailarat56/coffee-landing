@@ -78,49 +78,42 @@ export const BRANCHES: Branch[] = [
     id: 'istanbul',
     city: 'İstanbul',
     address: 'Galata Mah. Serdar-ı Ekrem Sokak No: 12, Beyoğlu',
-    coordinates: { x: 19, y: 24 },
     position: { lat: 41.0256, lng: 28.9741 }
   },
   {
     id: 'ankara',
     city: 'Ankara',
     address: 'Çankaya Mah. Tunalı Hilmi Cad. No: 45, Çankaya',
-    coordinates: { x: 38, y: 36 },
     position: { lat: 39.9042, lng: 32.8622 }
   },
   {
     id: 'izmir',
     city: 'İzmir',
     address: 'Alsancak Mah. Kıbrıs Şehitleri Cad. No: 128, Konak',
-    coordinates: { x: 10, y: 53 },
     position: { lat: 38.435, lng: 27.142 }
   },
   {
     id: 'antalya',
     city: 'Antalya',
     address: 'Konyaaltı Cad. No: 45, Muratpaşa',
-    coordinates: { x: 27, y: 78 },
     position: { lat: 36.8841, lng: 30.6861 }
   },
   {
     id: 'bursa',
     city: 'Bursa',
     address: 'Nilüfer Mah. FSM Bulvarı No: 55, Nilüfer',
-    coordinates: { x: 21, y: 31 },
     position: { lat: 40.2100, lng: 28.9500 }
   },
   {
     id: 'adana',
     city: 'Adana',
     address: 'Ziyapaşa Bulvarı No: 88, Seyhan',
-    coordinates: { x: 50, y: 75 },
     position: { lat: 37.0000, lng: 35.3213 }
   },
   {
     id: 'maras',
     city: 'Maraş',
     address: 'Bahçelievler Mah. 12. Sokak No: 5, Kahramanmaraş',
-    coordinates: { x: 56, y: 68 },
     position: { lat: 37.5858, lng: 36.9371 }
   },
 ];

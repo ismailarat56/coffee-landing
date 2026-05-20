@@ -12,6 +12,5 @@ export interface Branch {
   id: string;
   city: string;
   address: string;
-  coordinates: { x: number; y: number }; // Percentage for the map
   position: { lat: number; lng: number };
 }

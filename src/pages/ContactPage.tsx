@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { MessageSquare, Phone, Mail, MapPin, Instagram, Facebook, Twitter, Youtube, ArrowUpRight } from 'lucide-react';
 import { cn } from '../lib/utils';
+import { BRANCHES } from '../data/mockData';
+import { BranchGoogleMap } from '../components/maps/BranchGoogleMap';
 
 const CONTACT_METHODS = [
   {
@@ -38,6 +40,8 @@ const SOCIAL_LINKS = [
   { icon: Twitter, name: 'Twitter', href: '#' },
   { icon: Youtube, name: 'Youtube', href: '#' },
 ];
+
+const HEADQUARTERS_BRANCH = BRANCHES.find((branch) => branch.id === 'istanbul') ?? BRANCHES[0];
 
 export default function ContactPage() {
   return (
@@ -122,27 +126,13 @@ export default function ContactPage() {
               </div>
 
               <div className="bg-white rounded-[4rem] overflow-hidden flex-grow aspect-square md:aspect-auto min-h-[400px] shadow-2xl border border-indigo-brand/10 relative group p-6">
-                <div className="w-full h-full rounded-[3.5rem] overflow-hidden relative flex items-center justify-center p-4">
-                  <div className="relative w-full h-full flex items-center justify-center">
-                    <img 
-                      src="https://bujuyollarda.com/wp-content/uploads/2025/06/turkiye-ilceler-haritasi-1024x576.jpg" 
-                      alt="Türkiye Haritası" 
-                      className="w-full h-auto max-h-full object-contain rounded-2xl shadow-lg border border-indigo-brand/5"
-                    />
-                    
-                    {/* HQ Marker - Istanbul */}
-                    <div className="absolute z-20 -translate-x-1/2 -translate-y-1/2" style={{ left: '19%', top: '24%' }}>
-                      <div className="relative flex flex-col items-center">
-                        <div className="w-8 h-8 rounded-full bg-gold-brand flex items-center justify-center border-4 border-white shadow-2xl scale-110">
-                          <div className="w-2 h-2 bg-white rounded-full animate-ping" />
-                        </div>
-                        <div className="absolute top-full mt-3 bg-indigo-brand text-white px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest shadow-2xl whitespace-nowrap">
-                          Genel Merkez
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <BranchGoogleMap
+                  branches={[HEADQUARTERS_BRANCH]}
+                  selectedBranch={HEADQUARTERS_BRANCH}
+                  className="h-full min-h-[360px] rounded-[3.5rem]"
+                  fallbackTitle="Genel Merkez"
+                  getInfoTitle={() => 'Genel Merkez'}
+                />
               </div>
             </div>
           </div>
