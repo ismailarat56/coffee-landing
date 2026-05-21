@@ -22,43 +22,6 @@ The project is built with modern web technologies and libraries:
 *   **Utilities:** clsx + tailwind-merge
 *   **Maps:** Google Maps iframe embed
 
-## Installation
-
-Follow these steps to run the project locally:
-
-1.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/ismailarat56/coffee-landing.git
-    cd coffee-landing
-    ```
-
-2.  **Install Dependencies:**
-    ```bash
-    npm install
-    ```
-
-## Running the Project
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The application runs at `http://localhost:3000` by default.
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-Run the TypeScript check:
-
-```bash
-npm run lint
-```
-
 ## Key Features
 
 *   **Responsive Brand Experience:** A premium landing page experience for desktop and mobile visitors.
@@ -92,7 +55,7 @@ npm run lint
 
 ## Vercel Deployment
 
-*   **Live Demo:** Vercel link will be added
+*   **Live Demo:** https://coffee-landing-ss46.vercel.app/
 
 ## GitHub Repository
 
