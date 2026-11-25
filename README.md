@@ -1,62 +1,66 @@
+**English** · [Türkçe](README.tr.md)
+
 <div align="center">
 
 # BeeBuCoffee
 
-**Kurgusal bir kahve markası için React ve TypeScript ile yazılmış tanıtım ve katalog sitesi.**
+**A marketing and catalog site for a fictional coffee brand, written with React and TypeScript.**
 
 ![React](https://img.shields.io/badge/React-19-222?logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)
-![Lisans](https://img.shields.io/badge/lisans-MIT-2ea44f)
+![License](https://img.shields.io/badge/license-MIT-2ea44f)
 
-[Öne çıkanlar](#öne-çıkanlar) · [Ekran görüntüleri](#ekran-görüntüleri) · [Kurulum](#kurulum-ve-çalıştırma) · [Sayfalar](#sayfalar) · [Klasör yapısı](#klasör-yapısı)
+[Highlights](#highlights) · [Screenshots](#screenshots) · [Setup](#setup-and-running) · [Pages](#pages) · [Folder structure](#folder-structure)
 
-![BeeBuCoffee ana sayfası](public/screenshots/home.png)
+![BeeBuCoffee home page](public/screenshots/home.png)
 
 </div>
 
-BeeBuCoffee, butik bir kahve markasının web sitesini canlandıran tek sayfalı bir ön yüz uygulamasıdır. Ziyaretçi ürün kataloğunu, kafe menüsünü, blog yazılarını, şubeleri, kampanyaları ve etkinlikleri gezebilir. React 19, TypeScript, Vite 6 ve Tailwind CSS 4 ile yazıldı; içerik yerel TypeScript veri dosyalarından gelir, arka uç yoktur.
+BeeBuCoffee is a single-page front end application that presents the website of a boutique coffee brand. A visitor can browse the product catalog, the cafe menu, blog posts, branches, campaigns and events. It is written with React 19, TypeScript, Vite 6 and Tailwind CSS 4. The content comes from local TypeScript data files, and there is no back end.
 
-BeeBuCoffee kurgusal bir markadır; ürünler, fiyatlar, şubeler ve iletişim bilgileri örnek veridir.
+The user interface is in Turkish.
 
-Canlı sürüm: https://coffee-landing-ss46.vercel.app/
+BeeBuCoffee is a fictional brand. The products, prices, branches and contact details are sample data.
 
-## Öne çıkanlar
+Live version: https://coffee-landing-ss46.vercel.app/
 
-- **Ana sayfa:** karşılama bölümü, görünür olunca sayan istatistik sayaçları, marka tarihçesi ve en çok sevilen ürünler.
-- **Mağaza:** 8 ürünlük katalog; ada ve açıklamaya göre arama, kahve, termos ve aksesuar filtreleri.
-- **Ürün detayı:** her ürün için fiyat ve açıklama sayfası, altında dört ürünlük öneri listesi.
-- **Menü:** ürünler sıcak kahveler, soğuk kahveler ve fırın ürünleri başlıklarında listelenir.
-- **Blog:** üç yazı; her yazı kendi adresinde (`/blog/:slug`) açılır, sonunda diğer yazılar önerilir.
-- **Şubeler:** 7 şehirlik şube listesi; seçilen şube Google Maps iframe gömmesiyle haritada gösterilir.
-- **Kampanyalar ve etkinlikler:** üç kampanya kartı; üç etkinlik için liste ve detay sayfası (tarih, yer, kapasite, ücret).
-- **İletişim:** telefon, e-posta ve sosyal medya kartları ile genel merkez haritası.
-- **Gezinme:** kaydırınca arka planı değişen sabit üst menü, "Keşfet" açılır menüsü ve dar ekranlar için mobil menü.
-- **Animasyon:** Motion ile sayfa girişi, kaydırma ve filtre geçişi animasyonları.
-- **Tema:** Tailwind CSS 4 `@theme` bloğunda tanımlı indigo, altın ve krem renkleri; Outfit ve Playfair Display yazı tipleri.
+## Highlights
 
-## Ekran görüntüleri
+- **Home page:** a hero section, statistics counters that count up when they become visible, the brand history and the best-loved products.
+- **Shop:** a catalog of 8 products, with search by name and description and filters for coffee, thermoses and accessories.
+- **Product detail:** a page with the price and description for each product, with a list of four suggested products below it.
+- **Menu:** products are listed under the headings hot coffees, cold coffees and bakery items.
+- **Blog:** three posts. Each post opens at its own address (`/blog/:slug`), and the other posts are suggested at the end.
+- **Branches:** a list of branches in 7 cities. The selected branch is shown on a map with a Google Maps iframe embed.
+- **Campaigns and events:** three campaign cards, and a list and a detail page for three events (date, place, capacity, fee).
+- **Contact:** phone, email and social media cards, and a map of the head office.
+- **Navigation:** a fixed top menu whose background changes on scroll, the "Keşfet" (Explore) dropdown menu and a mobile menu for narrow screens.
+- **Animation:** page entry, scroll and filter transition animations with Motion.
+- **Theme:** indigo, gold and cream colors defined in the Tailwind CSS 4 `@theme` block, and the Outfit and Playfair Display fonts.
+
+## Screenshots
 
 <table>
   <tr>
-    <td width="50%"><img src="public/screenshots/shop.png" alt="Mağaza sayfası"></td>
-    <td width="50%"><img src="public/screenshots/blog.png" alt="Blog sayfası"></td>
+    <td width="50%"><img src="public/screenshots/shop.png" alt="Shop page"></td>
+    <td width="50%"><img src="public/screenshots/blog.png" alt="Blog page"></td>
   </tr>
   <tr>
-    <td align="center">Mağaza: arama kutusu, kategori filtreleri ve ürün kartları</td>
-    <td align="center">Blog: yazı kartları</td>
+    <td align="center">Shop: search box, category filters and product cards</td>
+    <td align="center">Blog: post cards</td>
   </tr>
 </table>
 
-Üstteki büyük görsel: ana sayfanın karşılama bölümü.
+The large image at the top: the hero section of the home page.
 
-## Gereksinimler
+## Requirements
 
-- Node.js 20.19 ve üzeri ya da 22.12 ve üzeri, npm ile birlikte (`package-lock.json` içindeki `@vitejs/plugin-react` paketinin `engines` alanına göre).
-- İnternet bağlantısı: ürün görselleri Unsplash'ten, yazı tipleri Google Fonts'tan, harita Google Maps'ten yüklenir.
+- Node.js 20.19 or later, or 22.12 or later, together with npm (according to the `engines` field of the `@vitejs/plugin-react` package in `package-lock.json`).
+- An internet connection: product images are loaded from Unsplash, fonts from Google Fonts and the map from Google Maps.
 
-`.env` dosyası gerekmez. `src/` altındaki kod hiçbir ortam değişkenini okumaz.
+No `.env` file is needed. The code under `src/` does not read any environment variable.
 
-## Kurulum ve çalıştırma
+## Setup and running
 
 ```bash
 git clone https://github.com/ismailarat56/coffee-landing.git
@@ -65,75 +69,75 @@ npm install
 npm run dev
 ```
 
-Geliştirme sunucusu `http://localhost:3000` adresinde açılır.
+The development server opens at `http://localhost:3000`.
 
-Diğer komutlar:
+Other commands:
 
-| Komut | İşlev |
+| Command | What it does |
 |---|---|
-| `npm run build` | üretim derlemesini `dist/` klasörüne yazar |
-| `npm run preview` | derlenmiş sürümü yerelde sunar |
-| `npm run lint` | TypeScript tür denetimi yapar (`tsc --noEmit`) |
-| `npm run clean` | `dist` klasörünü ve varsa `server.js` dosyasını siler (`rm -rf` kullanır) |
+| `npm run build` | writes the production build to the `dist/` folder |
+| `npm run preview` | serves the built version locally |
+| `npm run lint` | runs the TypeScript type check (`tsc --noEmit`) |
+| `npm run clean` | deletes the `dist` folder and the `server.js` file if it exists (uses `rm -rf`) |
 
-## Sayfalar
+## Pages
 
-Rotalar `src/App.tsx` içinde React Router DOM 7 ile tanımlıdır.
+The routes are defined in `src/App.tsx` with React Router DOM 7.
 
-| Adres | Sayfa |
+| Address | Page |
 |---|---|
-| `/` | Ana sayfa |
-| `/shop` | Mağaza: arama ve kategori filtresi |
-| `/product/:id` | Ürün detayı |
-| `/menu` | Kafe menüsü |
-| `/blog` | Blog yazıları |
-| `/blog/:slug` | Blog yazısı |
-| `/explore` | Şubeler ve harita |
-| `/campaigns` | Kampanyalar |
-| `/events` | Etkinlikler |
-| `/event/:id` | Etkinlik detayı |
-| `/contact` | İletişim |
-| `/register` | Müşteri kayıt formu |
+| `/` | Home page |
+| `/shop` | Shop: search and category filter |
+| `/product/:id` | Product detail |
+| `/menu` | Cafe menu |
+| `/blog` | Blog posts |
+| `/blog/:slug` | Blog post |
+| `/explore` | Branches and map |
+| `/campaigns` | Campaigns |
+| `/events` | Events |
+| `/event/:id` | Event detail |
+| `/contact` | Contact |
+| `/register` | Customer registration form |
 
-## İçerik verisi
+## Content data
 
-Sitedeki içerik koda gömülü dizilerden okunur:
+The content on the site is read from arrays embedded in the code:
 
-- `src/data/mockData.ts`: ürünler (`PRODUCTS`), şubeler (`BRANCHES`) ve etkinlikler (`EVENTS`).
-- `src/data/blogData.ts`: blog yazıları (`BLOG_POSTS`).
-- `src/pages/CampaignsPage.tsx`: kampanyalar, sayfa dosyasının içinde.
+- `src/data/mockData.ts`: products (`PRODUCTS`), branches (`BRANCHES`) and events (`EVENTS`).
+- `src/data/blogData.ts`: blog posts (`BLOG_POSTS`).
+- `src/pages/CampaignsPage.tsx`: campaigns, inside the page file.
 
-Yeni bir ürün ya da şube eklemek için ilgili diziye bir öğe eklemek yeterlidir. Ürün ve şube tipleri `src/types.ts` dosyasındadır.
+To add a new product or branch, it is enough to add an item to the related array. The product and branch types are in `src/types.ts`.
 
-## Klasör yapısı
+## Folder structure
 
 ```
-index.html               Vite giriş sayfası
-vite.config.ts           Vite ayarları (React ve Tailwind eklentileri)
-public/screenshots/      bu README'deki ekran görüntüleri
+index.html               Vite entry page
+vite.config.ts           Vite settings (React and Tailwind plugins)
+public/screenshots/      the screenshots in this README
 src/
-  main.tsx               uygulamanın başlangıç noktası
-  App.tsx                rota tanımları
-  index.css              Tailwind teması: renkler ve yazı tipleri
-  types.ts               Product ve Branch tipleri
-  lib/utils.ts           cn() sınıf birleştirme yardımcısı
-  data/                  ürün, şube, etkinlik ve blog verisi
-  components/layout/     Header ve Footer
-  components/maps/       BranchGoogleMap (şube haritası)
+  main.tsx               entry point of the application
+  App.tsx                route definitions
+  index.css              Tailwind theme: colors and fonts
+  types.ts               Product and Branch types
+  lib/utils.ts           cn() class merging helper
+  data/                  product, branch, event and blog data
+  components/layout/     Header and Footer
+  components/maps/       BranchGoogleMap (branch map)
   components/ui/         ProductCard
-  pages/                 12 sayfa bileşeni
+  pages/                 12 page components
 ```
 
-## Bilinen eksikler
+## Known gaps
 
-- Sepet, ödeme ve sipariş akışı yok; mağaza yalnızca katalog olarak çalışır.
-- Kayıt formu (`/register`) hiçbir yere veri göndermez. Kampanya sayfasındaki e-bülten formunun giriş alanı yok.
-- Sosyal medya, gizlilik politikası ve KVKK bağlantıları yer tutucudur (`href="#"`).
-- `.env.example` dosyasındaki değişkenler ile `@google/genai`, `express` ve `dotenv` bağımlılıkları `src/` altındaki kodda kullanılmaz.
-- Otomatik test yok; tek denetim `npm run lint` ile yapılan tür denetimidir.
+- There is no cart, payment or order flow. The shop works only as a catalog.
+- The registration form (`/register`) does not send data anywhere. The newsletter form on the campaigns page has no input field.
+- The social media, privacy policy and KVKK (the Turkish personal data protection law) links are placeholders (`href="#"`).
+- The variables in the `.env.example` file and the `@google/genai`, `express` and `dotenv` dependencies are not used in the code under `src/`.
+- There are no automated tests. The only check is the type check run with `npm run lint`.
 
-## Lisans
+## License
 
-Kod [MIT lisansı](LICENSE) ile sunulur.
+The code is released under the [MIT license](LICENSE).
 
-`src/App.tsx` dosyası AI Studio şablonundan gelir ve kendi başlığındaki Apache-2.0 bildirimini taşır.
+The file `src/App.tsx` comes from the AI Studio template and carries the Apache-2.0 notice in its own header.
